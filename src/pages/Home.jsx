@@ -96,7 +96,7 @@ const Home = () => {
                     className="img-fluid"
                     data-bss-parallax=""
                     data-bss-parallax-speed="0.8"
-                    src="src/assets/img/products/4789144.jpg"
+                    src=".src/assets/img/products/4789144.jpg"
                   />
                 </div>
                 <div
@@ -110,7 +110,7 @@ const Home = () => {
                     className="img-fluid"
                     data-bss-parallax=""
                     data-bss-parallax-speed="0.4"
-                    src="src/assets/img/products/4912625.jpg"
+                    src="./src/assets/img/products/4912625.jpg"
                   />
                 </div>
                 <div
@@ -124,7 +124,7 @@ const Home = () => {
                     className="img-fluid"
                     data-bss-parallax=""
                     data-bss-parallax-speed="0.25"
-                    src="src/assets/img/products/4676498.jpg"
+                    src="/src/assets/img/products/4676498.jpg"
                     style={{ width: "400.6px" }}
                   />
                 </div>
