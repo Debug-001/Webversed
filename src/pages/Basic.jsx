@@ -84,7 +84,7 @@ const Premium = () => {
               <a href="#">
                 <img
                   className="rounded img-fluid shadow w-100 fit-cover"
-                  src="src/assets/img/products/Screenshot%202023-01-30%20161751.jpg"
+                  src="img/products/Screenshot%202023-01-30%20161751.jpg"
                   style={{ height: 250 }}
                 />
               </a>
@@ -109,7 +109,7 @@ const Premium = () => {
               <a href="#">
                 <img
                   className="rounded img-fluid shadow w-100 fit-cover"
-                  src="src/assets/img/products/Screenshot%202023-01-30%20161911.jpg"
+                  src="img/products/Screenshot%202023-01-30%20161911.jpg"
                   style={{ height: 250 }}
                 />
               </a>
@@ -164,7 +164,7 @@ const Premium = () => {
               <a href="#">
                 <img
                   className="rounded img-fluid shadow w-100 fit-cover"
-                  src="src/assets/img/products/Screenshot%202023-01-30%20162001.png"
+                  src="img/products/Screenshot%202023-01-30%20162001.png"
                   style={{ height: 250 }}
                 />
               </a>
@@ -189,7 +189,7 @@ const Premium = () => {
               <a href="#">
                 <img
                   className="rounded img-fluid shadow w-100 fit-cover"
-                  src="src/assets/img/products/Screenshot%202023-01-30%20162244.jpg"
+                  src="img/products/Screenshot%202023-01-30%20162244.jpg"
                   style={{ height: 250 }}
                 />
               </a>
@@ -214,7 +214,7 @@ const Premium = () => {
               <a href="#">
                 <img
                   className="rounded img-fluid shadow w-100 fit-cover"
-                  src="src/assets/img/products/Screenshot%202023-01-30%20162457-3.jpg"
+                  src="img/products/Screenshot%202023-01-30%20162457-3.jpg"
                   style={{ height: 250 }}
                 />
               </a>
@@ -239,7 +239,7 @@ const Premium = () => {
               <a href="#">
                 <img
                   className="rounded img-fluid shadow w-100 fit-cover"
-                  src="src/assets/img/products/Screenshot%202023-01-30%20162803.jpg"
+                  src="img/products/Screenshot%202023-01-30%20162803.jpg"
                   style={{ height: 250 }}
                 />
               </a>
