@@ -85,7 +85,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/0e0314_85c768cc81df4bde96eedcdc1e88a940_mv2.png"
+                src="src/assets/img/products/0e0314_85c768cc81df4bde96eedcdc1e88a940_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -109,7 +109,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/0e0314_6932dff3b9944958aabe77f06341f269_mv2.png"
+                src="src/assets/img/products/0e0314_6932dff3b9944958aabe77f06341f269_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -133,7 +133,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/94a51f_73781c63931a4bbea817499e1ea5820a_mv2.png"
+                src="src/assets/img/products/94a51f_73781c63931a4bbea817499e1ea5820a_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -157,7 +157,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/94a51f_a5a62567ca6b403ba0361deada2f7a76_mv2.png"
+                src="src/assets/img/products/94a51f_a5a62567ca6b403ba0361deada2f7a76_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -181,7 +181,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/94a51f_f1ae57c171e5491b90cea6f1709727fa_mv2.png"
+                src="src/assets/img/products/94a51f_f1ae57c171e5491b90cea6f1709727fa_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -205,7 +205,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/0e0314_cc6036ac70ca490c8c59b7baf57f06bd_mv2.png"
+                src="src/assets/img/products/0e0314_cc6036ac70ca490c8c59b7baf57f06bd_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -229,7 +229,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/0e0314_cb34104a6104428e89d36f6834639914_mv2.png"
+                src="src/assets/img/products/0e0314_cb34104a6104428e89d36f6834639914_mv2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -253,7 +253,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="src/pages/assets/img/products/0e0314_fcbddc1d0549462a9d448064422f1732_mv2.png"
+                src="src/assets/img/products/0e0314_fcbddc1d0549462a9d448064422f1732_mv2.png"
                 style={{ height: 250 }}
               />
             </a>

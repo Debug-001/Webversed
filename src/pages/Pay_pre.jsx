@@ -83,7 +83,7 @@ const Pay_pre = () => {
               <form className="p-3 p-xl-4" method="post">
                 <img
                   className="float-none me-auto"
-                  src="/src/pages/assets/img/WhatsApp%20Image%202023-01-30%20at%2016.38.10.jpg"
+                  src="/src/assets/img/WhatsApp%20Image%202023-01-30%20at%2016.38.10.jpg"
                   style={{
                     width: 208,
                     height: "216.9px",

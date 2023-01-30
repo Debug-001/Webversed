@@ -96,7 +96,7 @@ const Home = () => {
                     className="img-fluid"
                     data-bss-parallax=""
                     data-bss-parallax-speed="0.8"
-                    src="src/pages/assets/img/products/4789144.jpg"
+                    src="src/assets/img/products/4789144.jpg"
                   />
                 </div>
                 <div
@@ -110,7 +110,7 @@ const Home = () => {
                     className="img-fluid"
                     data-bss-parallax=""
                     data-bss-parallax-speed="0.4"
-                    src="src/pages/assets/img/products/4912625.jpg"
+                    src="src/assets/img/products/4912625.jpg"
                   />
                 </div>
                 <div
@@ -124,7 +124,7 @@ const Home = () => {
                     className="img-fluid"
                     data-bss-parallax=""
                     data-bss-parallax-speed="0.25"
-                    src="src/pages/assets/img/products/4676498.jpg"
+                    src="src/assets/img/products/4676498.jpg"
                     style={{ width: "400.6px" }}
                   />
                 </div>
@@ -151,18 +151,18 @@ const Home = () => {
             {" "}
             <img
               className="m-3"
-              src="src/pages/assets/img/brands/Symbiosis-Golden-Jubilee-logo.png"
+              src="src/assets/img/brands/Symbiosis-Golden-Jubilee-logo.png"
             />
           </a>
           <a href="#">
             {" "}
-            <img className="m-3" src="src/pages/assets/img/brands/logo.png" />
+            <img className="m-3" src="src/assets/img/brands/logo.png" />
           </a>
           <a href="#"> </a>
           <a href="#"> </a>
           <img
             className="m-3"
-            src="src/pages/assets/img/brands/Indian_Institute_of_Technology_Roorkee_logo.png"
+            src="src/assets/img/brands/Indian_Institute_of_Technology_Roorkee_logo.png"
             style={{ width: 222 }}
           />
         </div>
@@ -287,7 +287,7 @@ const Home = () => {
                     className="rounded-circle flex-shrink-0 me-3 fit-cover"
                     width={50}
                     height={50}
-                    src="src/pages/assets/img/team/guest-male.png"
+                    src="src/assets/img/team/guest-male.png"
                   />
                   <div>
                     <p className="fw-bold text-primary mb-0">Rhitik Raj</p>
@@ -307,7 +307,7 @@ const Home = () => {
                     className="rounded-circle flex-shrink-0 me-3 fit-cover"
                     width={50}
                     height={50}
-                    src="src/pages/assets/img/team/guest-male.png"
+                    src="src/assets/img/team/guest-male.png"
                   />
                   <div>
                     <p className="fw-bold text-primary mb-0">Radhika Singh</p>
@@ -329,7 +329,7 @@ const Home = () => {
                     className="rounded-circle flex-shrink-0 me-3 fit-cover"
                     width={50}
                     height={50}
-                    src="src/pages/assets/img/team/guest-male.png"
+                    src="src/assets/img/team/guest-male.png"
                   />
                   <div>
                     <p className="fw-bold text-primary mb-0">Ishita Walia</p>

@@ -80,7 +80,7 @@ const Services = () => {
             <div className="col mb-5">
               <img
                 className="rounded img-fluid shadow"
-                src="src/pages/assets/img/products/Screenshot%20(128).png"
+                src="src/assets/img/products/Screenshot%20(128).png"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
@@ -107,7 +107,7 @@ const Services = () => {
             <div className="col order-md-last mb-5">
               <img
                 className="rounded img-fluid shadow"
-                src="src/pages/assets/img/products/Screenshot%202023-01-30%20155547.png"
+                src="src/assets/img/products/Screenshot%202023-01-30%20155547.png"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
