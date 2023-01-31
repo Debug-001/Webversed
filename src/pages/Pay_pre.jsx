@@ -1,8 +1,57 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '/img/logo.png'
 
 
 const Pay_pre = () => {
+  const [userData, setUserData] = useState({
+    firstName: "",
+    email: "",
+    number: "",
+  });
+
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+    setUserData({ ...userData, [name]: value })
+  };
+
+  const submitData = async (event) => {
+    event.preventDefault();
+    const { firstName, email, number } = userData
+    if( firstName && email && number){
+
+    const res = fetch(
+      'https://webversed-430f8-default-rtdb.firebaseio.com/userData.json',
+      {
+        method: "POST",
+        Headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName,
+          email,
+          number
+        })
+      }
+    )
+    if (res) {
+      setUserData({
+        firstName: "",
+        email: "",
+        number: "",
+      })
+      alert("Thankyou! We will contact your within 6hrs")
+    } else {
+      alert("Please fill the all the fields")
+    }
+    } else {
+      alert("Please fill the details before sending")
+  }
+}
+
+
+
   return (
     <>
   {/* Start: Navbar Centered Links */}
@@ -55,7 +104,7 @@ const Pay_pre = () => {
   <section className="py-5">
     {/* Start: Contact Details */}
     <section className="py-5">
-      <div className="container py-5">
+      <div className="container">
         <div className="row mb-5">
           <div className="col-md-8 col-xl-6 text-center mx-auto">
             <p className="fw-bold text-success mb-2">
@@ -67,17 +116,19 @@ const Pay_pre = () => {
         <div className="row d-flex justify-content-center">
           <div className="col-md-6 col-xl-4">
             <div>
-              <form className="p-3 p-xl-4" method="post">
+              <form className="p-3 p-xl-4" method="POST">
                 <img
-                  className="float-none me-auto"
+                  className="rounded mx-auto d-block"
                   src="img/WhatsApp%20Image%202023-01-30%20at%2016.38.10.jpg"
                   style={{
                     width: 208,
                     height: "216.9px",
                     marginBottom: 29,
-                    marginLeft: 76
                   }}
                 />
+                  <p className='fw-light  mx-auto text-center  text-success'>
+                     UPI - haider@sliceaxis 
+                    </p>
                 <a
                   className="btn btn-primary shadow d-block w-100"
                   role="button"
@@ -94,6 +145,8 @@ const Pay_pre = () => {
                     id="name-1"
                     name="name"
                     placeholder="Name"
+                    value={userData.name}
+                    onChange={postUserData}
                   />
                 </div>
                 {/* End: Success Example */}
@@ -105,6 +158,8 @@ const Pay_pre = () => {
                     id="email-1"
                     name="email"
                     placeholder="Email"
+                    value={userData.email}
+                    onChange={postUserData}
                   />
                 </div>
                 {/* End: Error Example */}
@@ -112,16 +167,17 @@ const Pay_pre = () => {
                   <textarea
                     className="form-control"
                     id="message-1"
-                    name="Whatsapp"
+                    name="number"
                     rows={1}
                     placeholder="Whasapp"
-                    defaultValue={""}
+                    value={userData.number}
+                    onChange={postUserData}
                   />
                 </div>
                 <div>
                   <button
                     className="btn btn-primary shadow d-block w-100"
-                    type="submit"
+                    type="submit" onClick={submitData}
                   >
                     Send{" "}
                   </button>

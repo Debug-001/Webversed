@@ -20,33 +20,33 @@ const Contact = () => {
   const submitData = async (event) => {
     event.preventDefault();
     const { firstName, email, number } = userData
-    if( firstName && email && number){
+    if (firstName && email && number) {
 
-    const res = fetch(
-      'https://webversed-430f8-default-rtdb.firebaseio.com/userData.json',
-      {
-        method: "POST",
-        Headers: {
-          "content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName,
-          email,
-          number
+      const res = fetch(
+        'https://webversed-430f8-default-rtdb.firebaseio.com/userData.json',
+        {
+          method: "POST",
+          Headers: {
+            "content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            email,
+            number
+          })
+        }
+      )
+      if (res) {
+        setUserData({
+          firstName: "",
+          email: "",
+          number: "",
         })
+        alert("Data stored")
+      } else {
+        alert("please fill the data")
       }
-    )
-    if (res){
-      setUserData({
-        firstName: "",
-        email: "",
-        number: "",
-      })
-      alert("Data stored")
-    } else {
-      alert ("please fill the data")
     }
-  }
   }
 
 
@@ -119,7 +119,7 @@ const Contact = () => {
               <div>
                 <form className="p-3 p-xl-4" method="POST">
                   {/* Start: Success Example */}
-                  <d iv className="mb-3">
+                  <div className="mb-3">
                     <input
                       className="form-control"
                       type="text"
@@ -129,7 +129,7 @@ const Contact = () => {
                       value={userData.firstName}
                       onChange={postUserData}
                     />
-                  </d>
+                  </div>
                   {/* End: Success Example */}
                   {/* Start: Error Example */}
                   <div className="mb-3">
@@ -149,7 +149,7 @@ const Contact = () => {
                       className="form-control"
                       id="number"
                       name="number"
-                      rows={6}
+                      rows={1}
                       placeholder="Enter your Whatsapp number"
                       value={userData.number}
                       onChange={postUserData}
