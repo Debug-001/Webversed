@@ -237,6 +237,65 @@ const Contact = () => {
       {/* Start: Footer Multi Column */}
       <footer className="bg-dark">
         <div className="container py-4 py-lg-5">
+          <div className="row justify-content-center">
+            {/* Start: Services */}
+            <div className="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+              <h3 className="fs-6 fw-bold">Services</h3>
+              <ul className="list-unstyled">
+                <li>
+                  <a href="#">Web design</a>
+                </li>
+                <li>
+                  <a href="#">Development</a>
+                </li>
+                <li>
+                  <a href="#">Hosting</a>
+                </li>
+              </ul>
+            </div>
+            {/* End: Services */}
+            {/* Start: About */}
+            <div className="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+              <h3 className="fs-6 fw-bold">About</h3>
+              <ul className="list-unstyled">
+                <li>
+                  <a href="#">Company</a>
+                </li>
+                <li>
+                  <a href="#">Team</a>
+                </li>
+                <li>
+                  <a href="#">Legacy</a>
+                </li>
+              </ul>
+            </div>
+            {/* End: About */}
+            {/* Start: Careers */}
+            <div className="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+              <h3 className="fs-6 fw-bold">Careers</h3>
+              <ul className="list-unstyled">
+                <li>
+                  <a href="#">Job openings</a>
+                </li>
+                <li>
+                  <a href="#">Employees</a>
+                </li>
+                <li>
+                  <a href="#">Benefits</a>
+                </li>
+              </ul>
+            </div>
+            {/* End: Careers */}
+            {/* Start: Social Icons */}
+            <div className="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
+              <div className="fw-bold d-flex align-items-center mb-2">
+              <img className="nav_logo" src={logo} alt="" />
+                <span>WebVersed</span>
+              </div>
+              <p className="text-muted">Bringing your ideas to life!</p>
+            </div>
+            {/* End: Social Icons */}
+          </div>
           <hr />
           <div className="text-muted d-flex justify-content-between align-items-center pt-3">
             <p className="mb-0">Copyright © 2023 WebVersed</p>
@@ -248,9 +307,9 @@ const Contact = () => {
                   height="1em"
                   fill="currentColor"
                   viewBox="0 0 16 16"
-                  className="bi bi-facebook"
+                  className="bi bi-telegram"
                 >
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
                 </svg>
               </li>
               <li className="list-inline-item">
