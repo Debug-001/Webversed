@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body{
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav_logo{
     margin-right: 20px;
+}
+
+#footer_text:hover{
+color: rgb(0, 221, 255) !important;
 }
 
