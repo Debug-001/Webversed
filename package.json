@@ -12,6 +12,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "browser-router": "^0.2.0",
+    "emailjs": "^4.0.1",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
     "firebase": "^9.16.0",

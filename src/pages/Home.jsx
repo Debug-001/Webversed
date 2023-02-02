@@ -45,6 +45,7 @@ const Home = () => {
                 <a className="nav-link" href="/contact">
                   Contacts
                 </a>
+                
               </li>
             </ul>
           </div>

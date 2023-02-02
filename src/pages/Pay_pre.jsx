@@ -1,8 +1,19 @@
 import React, { useState } from 'react'
 import logo from '/img/logo.png'
+// import { useRef } from 'react';
+// import emailjs from '../../node_modules/emailjs-com/cjs/methods/send/send'
 
 
 const Pay_basic = () => {
+
+//   const form = useRef()
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+//     emailjs.sendForm('service_pppg1el', 'template_ngf8ish', form.current, 'AZlZAJhJKQa5-Sjf2')
+//     e.target.reset()
+//   }
+
+
   const [userData, setUserData] = useState({
     firstName: "",
     email: "",
@@ -116,6 +127,7 @@ const Pay_basic = () => {
               <div className="col-md-6 col-xl-4">
                 <div>
                   <form className="p-3 p-xl-4" method="POST">
+                  {/* <form ref={form} className="p-3 p-xl-4" method="POST"> */}
                     <img
                       className="rounded mx-auto d-block"
                       src="img/WhatsApp%20Image%202023-01-30%20at%2016.38.10.jpg"
@@ -176,6 +188,7 @@ const Pay_basic = () => {
                       <button
                         className="btn btn-primary shadow d-block w-100"
                         type="submit" onClick={submitData}>
+                        {/* type="submit" onClick={() => handleClick(sendEmail, submitData)}> */}
                         Send{" "}
                       </button>
                     </div>

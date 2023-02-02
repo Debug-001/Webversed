@@ -9,7 +9,6 @@ import Pricing from "./pages/Pricing";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
-
 function App() {
 	return (
 		<>
