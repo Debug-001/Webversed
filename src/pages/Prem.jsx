@@ -72,7 +72,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="img/products/0e0314_85c768cc81df4bde96eedcdc1e88a940_mv2.png"
+                src="img/products/samyak.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -80,7 +80,7 @@ const Prem = () => {
               <a
                 className="btn btn-light"
                 role="button"
-                href="https://www.davidmilan.com/"
+                href="https://www.samyak003.in/"
               >
                 Website
               </a>
@@ -94,20 +94,21 @@ const Prem = () => {
         <div className="col mb-4">
           <div>
             <a href="#">
-              <img
-                className="rounded img-fluid shadow w-100 fit-cover"
-                src="img/products/0e0314_6932dff3b9944958aabe77f06341f269_mv2.png"
-                style={{ height: 250 }}
-              />
-            </a>
-            <div className="py-4">
-              <a
-                className="btn btn-light"
-                role="button"
-                href="https://www.christinavanessa.com/"
-              >
-                Website
+                <img
+                  className="rounded img-fluid shadow w-100 fit-cover"
+                  src="img/products/Screenshot%202023-01-30%20161751.jpg"
+                  style={{ height: 250 }}
+                />
               </a>
+              <div className="py-4">
+                <a
+                  className="btn btn-light justify-content-center align-items-center"
+                  role="button"
+                  style={{ width: "126.637px", fontSize: 13 }}
+                  href="https://premium-portfolio-5.netlify.app/"
+                >
+                  Website
+                </a>
               <h4 className="fw-bold" />
               <a className="btn btn-primary" role="button" href="/pay_pre ">
                 Select and Pay!
@@ -120,7 +121,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="img/products/94a51f_73781c63931a4bbea817499e1ea5820a_mv2.png"
+                src="img/products/man.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -128,7 +129,7 @@ const Prem = () => {
               <a
                 className="btn btn-light"
                 role="button"
-                href="https://www.studiobgz.com/"
+                href="https://premium-portoflio.netlify.app/"
               >
                 Website
               </a>
@@ -240,7 +241,7 @@ const Prem = () => {
             <a href="#">
               <img
                 className="rounded img-fluid shadow w-100 fit-cover"
-                src="img/products/0e0314_fcbddc1d0549462a9d448064422f1732_mv2.png"
+                src="img/products/man2.png"
                 style={{ height: 250 }}
               />
             </a>
@@ -248,7 +249,7 @@ const Prem = () => {
               <a
                 className="btn btn-light"
                 role="button"
-                href="https://www.studioholmberg.se/"
+                href="https://permium-portfolios.netlify.app/"
               >
                 Website
               </a>
