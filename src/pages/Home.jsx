@@ -1,4 +1,5 @@
 import React from 'react'
+import logo2 from '/img/logo2.png'
 import logo from '/img/logo.png'
 
 
@@ -12,7 +13,7 @@ const Home = () => {
       >
         <div className="container">
           <a className="navbar-brand d-flex align-items-center" href="/">
-            <img className="nav_logo" src={logo} alt="" />
+            <img className="nav_logo" src={logo2} alt="" />
             <span>WebVersed</span>
           </a>
           <button
