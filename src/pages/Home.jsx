@@ -132,7 +132,7 @@ const Home = () => {
           <p className="mb-4" style={{ fontSize: "1.6rem" }}>
             Used by&nbsp;
             <span className="text-success">
-              <strong>1200+</strong>
+              <strong>50+</strong>
             </span>
             &nbsp;of the students from across the nation.
           </p>
@@ -195,7 +195,7 @@ const Home = () => {
                     <h5 className="fw-bold card-title">Basic Plan</h5>
                     <p className="text-muted card-text mb-4">
                       Select from 50+ amazing&nbsp; presets. Free hosting and
-                      domain. Delivers within 2 business days. Rs.899 only!
+                      domain. Delivers within 2 business days. Rs.499 only!
                     </p>
                     <a
                       className="btn btn-primary shadow"
@@ -235,7 +235,7 @@ const Home = () => {
                       style={{ color: "var(--bs-light)" }}
                     >
                       Select any premium pre-set to begin with. Full user
-                      customisation. 100% Uniqueness. Rs. 2000 only!
+                      customisation. 100% Uniqueness. Rs. 1499 only!
                     </p>
                     <a
                       className="btn btn-primary shadow"

@@ -144,9 +144,9 @@ const Pay_basic = () => {
                       className="btn btn-primary shadow d-block w-100"
                       role="button"
                       style={{ marginBottom: 63 }}
-                      href="https://paytm.me/v-C3SOP"
+                      href="https://paytm.me/MseM-8Z"
                     >
-                      Pay Rs. 2000
+                      Pay Rs. 1499
                     </a>
                     {/* Start: Success Example */}
                     <div className="mb-3">

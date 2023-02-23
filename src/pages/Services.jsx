@@ -75,7 +75,7 @@ const Services = () => {
                 <h5 className="fw-bold">Basic Plan</h5>
                 <p className="text-muted mb-4">
                   Select from 50+ amazing&nbsp; presets. Free hosting and domain.
-                  Delivers within 2 business days. Rs.899 only!
+                  Delivers within 2 business days. Rs.499 only!
                 </p>
                 <a
                   className="btn btn-primary shadow"
@@ -102,7 +102,7 @@ const Services = () => {
                 <h5 className="fw-bold">Premium Plan!</h5>
                 <p className="text-muted mb-4">
                   Select any premium pre-set to begin with. Full user customisation.
-                  100% Uniqueness. Rs. 2000 only!
+                  100% Uniqueness. Rs. 1499 only!
                 </p>
                 <a
                   className="btn btn-primary shadow"
