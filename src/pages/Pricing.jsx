@@ -37,7 +37,7 @@ const Pricing = () => {
           </li>
           <li className="nav-item" />
           <li className="nav-item">
-            <a className="nav-link active" href="/">
+            <a className="nav-link active" href="/about">
               About Us
             </a>
           </li>

@@ -37,7 +37,7 @@ const Services = () => {
               </li>
               <li className="nav-item" />
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/about">
                   About Us
                 </a>
               </li>
@@ -50,7 +50,9 @@ const Services = () => {
           </div>
         </div>
       </nav>
+
       {/* End: Navbar Centered Links */}
+
       <section className="py-5">
         {/* Start: Features Cards */}
         <div className="container">
@@ -399,6 +401,7 @@ const Services = () => {
           </div>
         </div>
       </footer>
+
       {/* End: Footer Multi Column */}
     </>
 

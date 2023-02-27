@@ -8,6 +8,7 @@ import Basic from "./pages/Basic";
 import Pricing from "./pages/Pricing";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import About from "./pages/About"
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/home" element={<Home />} />
+				<Route path="/about" element={<About/>} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/prem" element={<Prem />} />
 				<Route path="/pay_basic" element={<Pay_basic />} />

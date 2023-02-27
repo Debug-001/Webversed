@@ -37,7 +37,7 @@ const Home = () => {
               </li>
               <li className="nav-item" />
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/about">
                   About Us
                 </a>
               </li>
@@ -45,7 +45,6 @@ const Home = () => {
                 <a className="nav-link" href="/contact">
                   Contacts
                 </a>
-                
               </li>
             </ul>
           </div>
@@ -334,6 +333,7 @@ const Home = () => {
         </div>
         {/* End: Testimonials */}
       </section>
+
       {/* Start: Contact Details */}
       <section className="py-5">
         <div className="container">
@@ -455,6 +455,7 @@ const Home = () => {
         </div>
       </section>
       {/* End: Contact Details */}
+
       {/* Start: Newsletter Subscription Color */}
       <section className="py-5">
         <div className="container">
