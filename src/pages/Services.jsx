@@ -77,7 +77,7 @@ const Services = () => {
                 <h5 className="fw-bold">Basic Plan</h5>
                 <p className="text-muted mb-4">
                   Select from 50+ amazing&nbsp; presets. Free hosting and domain.
-                  Delivers within 2 business days. Rs.499 only!
+                  Delivers within 2 business days. Rs.699 only!
                 </p>
                 <a
                   className="btn btn-primary shadow"
@@ -104,7 +104,7 @@ const Services = () => {
                 <h5 className="fw-bold">Premium Plan!</h5>
                 <p className="text-muted mb-4">
                   Select any premium pre-set to begin with. Full user customisation.
-                  100% Uniqueness. Rs. 1499 only!
+                  100% Uniqueness. Rs. 1999 only!
                 </p>
                 <a
                   className="btn btn-primary shadow"
@@ -138,7 +138,7 @@ const Services = () => {
                 <div>
                   <h3 className="fw-bold mb-0">Basic Bundle</h3>
                   <p>Netlify Domain</p>
-                  <h4 className="display-4 fw-bold">Rs. 899</h4>
+                  <h4 className="display-4 fw-bold">Rs. 699</h4>
                 </div>
               </div>
               <div>
@@ -207,7 +207,7 @@ const Services = () => {
                 <div>
                   <h3 className="fw-bold text-white mb-0">Pro Bundle</h3>
                   <p>Custom domain+ hosting</p>
-                  <h4 className="display-4 fw-bold text-white">Rs. 2000</h4>
+                  <h4 className="display-4 fw-bold text-white">Rs. 1999</h4>
                 </div>
                 <div>
                   <span className="badge rounded-pill bg-primary text-uppercase bg-semi-white">

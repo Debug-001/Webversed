@@ -194,7 +194,7 @@ const Home = () => {
                     <h5 className="fw-bold card-title">Basic Plan</h5>
                     <p className="text-muted card-text mb-4">
                       Select from 50+ amazing&nbsp; presets. Free hosting and
-                      domain. Delivers within 2 business days. Rs.499 only!
+                      domain. Delivers within 2 business days. Rs.699 only!
                     </p>
                     <a
                       className="btn btn-primary shadow"
@@ -234,7 +234,7 @@ const Home = () => {
                       style={{ color: "var(--bs-light)" }}
                     >
                       Select any premium pre-set to begin with. Full user
-                      customisation. 100% Uniqueness. Rs. 1499 only!
+                      customisation. 100% Uniqueness. Rs. 1999 only!
                     </p>
                     <a
                       className="btn btn-primary shadow"
