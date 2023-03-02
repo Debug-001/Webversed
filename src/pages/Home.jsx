@@ -1,8 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '/img/logo.png'
 
 
 const Home = () => {
+  const [userData, setUserData] = useState({
+    firstName: "",
+    email: "",
+    telephone: "",
+    message: ""
+  });
+
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+    setUserData({ ...userData, [name]: value })
+  };
+
+  const submitData = async (event) => {
+    event.preventDefault();
+    const { firstName, email, telephone, message } = userData
+    if (firstName && email && telephone && message) {
+
+      const res = fetch(
+        'https://webversedcontact-default-rtdb.firebaseio.com/contactData.json',
+        {
+          method: "POST",
+          Headers: {
+            "content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            email,
+            telephone,
+            message
+          })
+        }
+      )
+      if (res) {
+        setUserData({
+          firstName: "",
+          email: "",
+          telephone: "",
+          message: ""
+        })
+        alert("Your response has been saved. Expect a reply soon!")
+      } else {
+        alert("please fill the data")
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       {/* Start: Navbar Centered Links */}
@@ -52,7 +111,7 @@ const Home = () => {
       </nav>
       {/* End: Navbar Centered Links */}
 
-      
+
       <header className="bg-dark">
         {/* Start: Hero Clean Reverse */}
         <div className="container pt-4 pt-xl-5">
@@ -159,105 +218,186 @@ const Home = () => {
       {/* End: Brands */}
 
 
-      <section>
-        {/* Start: Features Cards */}
-        <div className="container bg-dark py-5">
-          <div className="row">
+      <section className="py-5" >
+        {/* Start: Pricing Duo */}
+        <div className="container  pt-5">
+          <div className="row mb-5">
             <div className="col-md-8 col-xl-6 text-center mx-auto">
-              <p className="fw-bold text-success mb-2">Our Services</p>
-              <h3 className="fw-bold">Plans we offer!</h3>
+              <h2 className="fw-bold">Get your portfolio asap!</h2>
+              <p className="text-muted">Checkout our Amazing Plans!!!</p>
             </div>
           </div>
-          <div className="py-5 p-lg-5">
-            <div
-              className="row row-cols-1 row-cols-md-2 mx-auto"
-              style={{ maxWidth: 900 }}
-            >
-              <div className="col mb-5">
-                <div className="card shadow-sm">
-                  <div className="card-body px-4 py-5 px-md-5">
-                    <div
-                      className="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                      style={{ top: "1rem", right: "1rem", position: "absolute" }}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-person text-success"
-                      >
-                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                      </svg>
+          <div className="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 d-flex align-items-md-center align-items-xl-center">
+            <div className="col offset-xl-2 mb-4">
+              <div className="card bg-dark border-dark">
+                <div className="card-body p-4">
+                  <div className="d-flex justify-content-between">
+                    <div>
+                      <h3 className="fw-bold mb-0">Basic Bundle</h3>
+                      <p>Netlify Domain</p>
+                      <h4 className="display-4 fw-bold">Rs. 699</h4>
                     </div>
-                    <h5 className="fw-bold card-title">Basic Plan</h5>
-                    <p className="text-muted card-text mb-4">
-                      Select from 50+ amazing&nbsp; presets. Free hosting and
-                      domain. Delivers within 2 business days. Rs.699 only!
-                    </p>
-                    <a
-                      className="btn btn-primary shadow"
-                      role="button"
-                      href="/services"
-                    >
-                      Learn more
-                    </a>
                   </div>
+                  <div>
+                    <ul className="list-unstyled">
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>48hrs delivery</span>
+                      </li>
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>Choose from over 50+ designs</span>
+                      </li>
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>Limited user customisation</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    className="btn btn-primary d-block w-100"
+                    role="button"
+                    href="/basic "
+                  >
+                    Browse
+                  </a>
                 </div>
               </div>
-              <div className="col mb-5">
-                <div className="card shadow-sm">
-                  <div className="card-body px-4 py-5 px-md-5">
-                    <div
-                      className="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                      style={{ top: "1rem", right: "1rem", position: "absolute" }}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-person-plus text-success"
-                      >
-                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                        <path
-                          fillRule="evenodd"
-                          d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
-                        ></path>
-                      </svg>
+            </div>
+            <div className="col mb-4">
+              <div className="card text-white bg-primary">
+                <div className="card-body p-4">
+                  <div className="d-flex justify-content-between">
+                    <div>
+                      <h3 className="fw-bold text-white mb-0">Pro Bundle</h3>
+                      <p>Custom domain+ hosting</p>
+                      <h4 className="display-4 fw-bold text-white">Rs. 1999</h4>
                     </div>
-                    <h5 className="fw-bold card-title">Premium Plan&nbsp;</h5>
-                    <p
-                      className="text-muted card-text mb-4"
-                      style={{ color: "var(--bs-light)" }}
-                    >
-                      Select any premium pre-set to begin with. Full user
-                      customisation. 100% Uniqueness. Rs. 1999 only!
-                    </p>
-                    <a
-                      className="btn btn-primary shadow"
-                      role="button"
-                      href="/services"
-                    >
-                      Learn more
-                    </a>
+                    <div>
+                      <span className="badge rounded-pill bg-primary text-uppercase bg-semi-white">
+                        Best Value
+                      </span>
+                    </div>
                   </div>
+                  <div>
+                    <ul className="list-unstyled">
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>Select over premium presets.</span>
+                      </li>
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>Full user choice UI customisation</span>
+                      </li>
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>2 months additional developer support.</span>
+                      </li>
+                      <li className="d-flex mb-2">
+                        <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            className="bi bi-check-lg text-primary"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                          </svg>
+                        </span>
+                        <span>Custom domain + 1 month free hosting.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    className="btn btn-primary d-block w-100 bg-semi-white"
+                    role="button"
+                    href="/prem"
+                  >
+                    Browse
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* End: Features Cards */}
+        {/* End: Pricing Duo */}
       </section>
 
-      <section />
 
 
+
+      {/* Testimonials */}
       <section className="py-5 mt-5">
         {/* Start: Testimonials */}
-        <div className="container py-5">
+        <div className="container py-5 ">
           <div className="row mb-5">
             <div className="col-md-8 col-xl-6 text-center mx-auto">
               <p className="fw-bold text-success mb-2">Testimonials</p>
@@ -335,26 +475,28 @@ const Home = () => {
       </section>
 
       {/* Start: Contact Details */}
-      <section className="py-5">
+      <section id="contact" className="py-5">
         <div className="container">
           <div className="row mb-5">
             <div className="col-md-8 col-xl-6 text-center mx-auto">
-              <p className="fw-bold text-success mb-2">Contacts</p>
-              <h2 className="fw-bold">How you can reach us</h2>
+              <p className="fw-bold text-success mb-2">Got some Query?</p>
+              <h2 className="fw-bold">Instant Customer Hotline (27*7)&nbsp;</h2>
             </div>
           </div>
           <div className="row d-flex justify-content-center">
             <div className="col-md-6 col-xl-4">
               <div>
-                <form className="p-3 p-xl-4" method="post">
+                <form className="p-3 p-xl-4" method="POST">
                   {/* Start: Success Example */}
                   <div className="mb-3">
                     <input
                       className="form-control"
                       type="text"
                       id="name-1"
-                      name="name"
+                      name="firstName"
                       placeholder="Name"
+                      value={userData.firstName}
+                      onChange={postUserData}
                     />
                   </div>
                   {/* End: Success Example */}
@@ -366,24 +508,35 @@ const Home = () => {
                       id="email-1"
                       name="email"
                       placeholder="Email"
+                      value={userData.email}
+                      onChange={postUserData}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      className="form-control"
+                      type="tel"
+                      name="telephone"
+                      placeholder="Contact Number"
+                      value={userData.telephone}
+                      onChange={postUserData}
                     />
                   </div>
                   {/* End: Error Example */}
                   <div className="mb-3">
                     <textarea
                       className="form-control"
-                      id="message-1"
                       name="message"
-                      rows={6}
-                      placeholder="Message"
-                      defaultValue={""}
+                      rows={4}
+                      placeholder="Enter your query"
+                      value={userData.message}
+                      onChange={postUserData}
                     />
                   </div>
                   <div>
                     <button
                       className="btn btn-primary shadow d-block w-100"
-                      type="submit"
-                    >
+                      type="submit" onClick={submitData}>
                       Send{" "}
                     </button>
                   </div>
@@ -394,59 +547,74 @@ const Home = () => {
               <div className="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100">
                 <div className="d-flex align-items-center p-3">
                   <div className="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className="bi bi-whatsapp"
-                    >
-                      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-                    </svg>
+                    <a href="https:/wa.me/+918726879756">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        className="bi bi-whatsapp"
+                      >
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                      </svg>
+                    </a>
                   </div>
                   <div className="px-2">
                     <h6 className="fw-bold mb-0">Whatsapp</h6>
-                    <p className="text-muted mb-0">Instant reply</p>
+                    <a href="https:/wa.me/+918726879756">
+                      <p id='footer_text' className="text-muted mb-0">Click here!</p>
+                    </a>
                   </div>
                 </div>
                 <div className="d-flex align-items-center p-3">
                   <div className="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className="bi bi-envelope"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
-                      ></path>
-                    </svg>
+                    <a href="mailto:syedmohdhaider2@gmail.com">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        className="bi bi-envelope"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                        ></path>
+                      </svg>
+                    </a>
                   </div>
                   <div className="px-2">
                     <h6 className="fw-bold mb-0">Email</h6>
-                    <p className="text-muted mb-0">Replies in 2-3 business days</p>
+                    <a href="mailto:syedmohdhaider2@gmail.com">
+                      <p id='footer_text' className="text-muted mb-0">
+                        webversed021@gmail.com (Usually takes 2-4 days to reply)
+                      </p>
+                    </a>
                   </div>
                 </div>
                 <div className="d-flex align-items-center p-3">
                   <div className="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className="bi bi-telegram"
-                    >
-                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
-                    </svg>
+                    <a href="https://t.me/web_versed_hotline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        className="bi bi-telegram"
+                      >
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
+                      </svg>
+                    </a>
                   </div>
                   <div className="px-2">
                     <h6 className="fw-bold mb-0">Telegram</h6>
-                    <p className="text-muted mb-0">Replies within 2-5mins</p>
+                    <a href="https://t.me/web_versed_hotline"><p id='footer_text' className="text-muted mb-0">
+                      &nbsp;Join our TG for instant reply (Replies within 2-5 mins)
+                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -454,7 +622,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* End: Contact Details */}
+
+
 
       {/* Start: Newsletter Subscription Color */}
       <section className="py-5">
@@ -465,10 +634,10 @@ const Home = () => {
                 Subscribe to our newsletter &nbsp;
                 <span>
                   <a href="https://codersbake.in/">
-                  Codersbake!</a></span> 
+                    Codersbake!</a></span>
               </h2>
             </div>
-           
+
           </div>
         </div>
       </section>
@@ -528,7 +697,7 @@ const Home = () => {
             {/* Start: Social Icons */}
             <div className="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
               <div className="fw-bold d-flex align-items-center mb-2">
-              <img className="nav_logo" src={logo} alt="" />
+                <img className="nav_logo" src={logo} alt="" />
                 <span>WebVersed</span>
               </div>
               <p className="text-muted">Bringing your ideas to life!</p>

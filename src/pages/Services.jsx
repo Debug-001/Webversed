@@ -74,7 +74,7 @@ const Services = () => {
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
               <div>
-                <h5 className="fw-bold">Basic Plan</h5>
+                <h5 className="fw-bold">BASIC PLAN</h5>
                 <p className="text-muted mb-4">
                   Select from 50+ amazing&nbsp; presets. Free hosting and domain.
                   Delivers within 2 business days. Rs.699 only!
@@ -101,7 +101,7 @@ const Services = () => {
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
               <div>
-                <h5 className="fw-bold">Premium Plan!</h5>
+                <h5 className="fw-bold">PREMIUM PLAN!</h5>
                 <p className="text-muted mb-4">
                   Select any premium pre-set to begin with. Full user customisation.
                   100% Uniqueness. Rs. 1999 only!
@@ -119,181 +119,6 @@ const Services = () => {
         </div>
         {/* End: Features Cards */}
       </section>
-
-      {/* pricing section  */}
-      <section className="py-5">
-    {/* Start: Pricing Duo */}
-    <div className="container">
-      <div className="row mb-5">
-        <div className="col-md-8 col-xl-6 text-center mx-auto">
-          <h2 className="fw-bold">Get your portfolio asap!</h2>
-          <p className="text-muted">Select from our best available plans</p>
-        </div>
-      </div>
-      <div className="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 d-flex align-items-md-center align-items-xl-center">
-        <div className="col offset-xl-2 mb-4">
-          <div className="card bg-dark border-dark">
-            <div className="card-body p-4">
-              <div className="d-flex justify-content-between">
-                <div>
-                  <h3 className="fw-bold mb-0">Basic Bundle</h3>
-                  <p>Netlify Domain</p>
-                  <h4 className="display-4 fw-bold">Rs. 699</h4>
-                </div>
-              </div>
-              <div>
-                <ul className="list-unstyled">
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>48hrs delivery</span>
-                  </li>
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>Choose from over 50+ designs</span>
-                  </li>
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>Limited user customisation</span>
-                  </li>
-                </ul>
-              </div>
-              <a
-                className="btn btn-primary d-block w-100"
-                role="button"
-                href="/basic "
-              >
-                Browse
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col mb-4">
-          <div className="card text-white bg-primary">
-            <div className="card-body p-4">
-              <div className="d-flex justify-content-between">
-                <div>
-                  <h3 className="fw-bold text-white mb-0">Pro Bundle</h3>
-                  <p>Custom domain+ hosting</p>
-                  <h4 className="display-4 fw-bold text-white">Rs. 1999</h4>
-                </div>
-                <div>
-                  <span className="badge rounded-pill bg-primary text-uppercase bg-semi-white">
-                    Best Value
-                  </span>
-                </div>
-              </div>
-              <div>
-                <ul className="list-unstyled">
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>Select over premium presets.</span>
-                  </li>
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>Full user choice UI customisation</span>
-                  </li>
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>2 months additional developer support.</span>
-                  </li>
-                  <li className="d-flex mb-2">
-                    <span className="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
-                        className="bi bi-check-lg text-primary"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
-                      </svg>
-                    </span>
-                    <span>Custom domain + 1 month free hosting.</span>
-                  </li>
-                </ul>
-              </div>
-              <a
-                className="btn btn-primary d-block w-100 bg-semi-white"
-                role="button"
-                href="/prem"
-              >
-                Browse
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {/* End: Pricing Duo */}
-  </section>
-
 
       {/* Start: Footer Multi Column */}
       <footer className="bg-dark">
