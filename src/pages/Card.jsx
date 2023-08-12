@@ -22,6 +22,17 @@ const Card = () => {
     //     ? CardInfo.filter((item) => item.category === selectedCategory)
     //     : CardInfo;
 
+    // const [infoData, setInfoData] = useState(CardInfo);
+    // const [filteredData, setFilteredData] = useState(infoData);
+
+    // const filterItem = (category) => {
+    //     if (category === 'all') {
+    //         setFilteredData(infoData);
+    //     } else {
+    //         const updatedList = infoData.filter((curElem) => curElem.category === category);
+    //         setFilteredData(updatedList);
+    //     }
+    // };
     return (
         <>
             <div className='container'>
@@ -37,6 +48,9 @@ const Card = () => {
                                 <a href="/card2" className="btn btn-primary" onClick={() => filterItem('app')}>
                                     Read More
                                 </a>
+                                {/* <a href={`/card${item.id}`} className="btn btn-primary" onClick={() => filterItem(item.category)}>
+                                    Read More
+                                </a> */}
                             </div>
                         </div>
 
