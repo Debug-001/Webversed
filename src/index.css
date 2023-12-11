@@ -1,7 +1,247 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style-type: none;
+  text-decoration: none !important;
+  list-style: none;
   scroll-behavior: smooth;
+}
+
+/* :root {
+  --btn-bg-color: #041f31;
+  --btn-border: 1px solid #000;
+  --btn-bor-rad: 4px;
+  --btn-color: white;
+  --btn-padding: 12px 30px;
+  --btn-font-size: 14px;
+  --btn-font-weight: 400;
+} */
+
+body {
+  font-family: Gabarito, sans-serif;
+  background-image: linear-gradient(to right, #bbd1ff, #fafcff);
+}
+
+/*================== navbar and footer section ====================== */
+.navbar {
+  background-color: white;
+}
+
+.nav-item {
+  color: #041f31;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 900;
+  transition: all 0.25 ease-in-out;
+}
+
+.btn {
+  background-color: #041f31;
+  border: 1px solid #000;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btn:hover {
+  background-color: #000000;
+  color: white;
+  border: 2px solid rgb(112, 112, 112) !important;
+  transition: all 0.25s ease-in-out;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: all 0.25s ease-in-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.logo-text {
+  color: #041f31;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  padding-left: 0;
+}
+
+.footer-active {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 22%;
+  display: flex;
+  position: relative;
+}
+
+.footer-active:hover {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transform: scale(1.1);
+  transition: all 0.25s ease-in-out;
+}
+
+/*============== home page header section ================ */
+
+.header-section {
+  margin-top: 5rem !important;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-header {
+  color: #1a4664;
+  font-weight: lighter !important;
+  font-size: 1.2rem;
+  margin-top: 10px !important;
+  width: 100%;
+  max-width: 670px;
+}
+
+.header-section h1 {
+  opacity: 0.94;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(171deg, #041f3a 64%, rgba(4, 31, 58, 0.68));
+  -webkit-background-clip: text;
+  background-clip: text;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.header2-section {
+  margin-top: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  padding: 2rem;
+  color: white;
+  height: auto;
+  background-color: #04001f;
+  background-image: linear-gradient(185deg, #07003a, #000),
+    radial-gradient(circle closest-side at 40% 30%, #07003a, #000);
+  border-radius: 10px;
+}
+
+.card-top-heading {
+  padding-top: 4rem !important;
+  font-size: larger;
+  color: #a9a9a9;
+}
+
+.card-text-heading {
+  font-weight: bolder;
+  font-size: 2.6rem !important;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(117deg, #2dc688, #4b78fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.card-text-p {
+  width: 100%;
+  max-width: 470px;
+  font-size: 1.2rem;
+  color: #878a89;
+}
+
+/* .card-images img{
+  width: 40%;
+} */
+
+.img-1 {
+  margin-top: 4rem;
+  width: 50% !important;
+}
+.img-2 {
+  margin-top: -50px;
+  width: 50% !important;
+}
+.img-3 {
+  margin-left: 10rem;
+  display: flex;
+  width: 50% !important;
+}
+
+.pricing{
+  margin-top: 12rem;
+}
+
+.pricing-heading {
+  -webkit-text-fill-color: transparent !important;
+  background-image: linear-gradient(
+    173deg,
+    #041f3a 65%,
+    rgba(121, 121, 121, 0.02)
+  ) !important;
+  -webkit-background-clip: text !important; 
+  background-clip: text !important;
+  font-size: 3rem;
+}
+
+
+.pricing-sub{
+  width: 100%;
+  max-width:550px;
+  font-size: 1.2rem;
+  margin-left: 22.5rem;
+  margin-top: 20px;
+  color: #2a668e;
+}
+
+.card-header-content h1{
+  font-size: 1.5rem;
+}
+
+.card-group{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
