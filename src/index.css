@@ -17,6 +17,11 @@
 } */
 
 body {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+
   font-family: Gabarito, sans-serif;
   background-image: linear-gradient(to right, #bbd1ff, #fafcff);
 }
