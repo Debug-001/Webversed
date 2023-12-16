@@ -208,9 +208,6 @@ body {
   color: #878a89;
 }
 
-/* .card-images img{
-  width: 40%;
-} */
 
 .img-1 {
   margin-top: 4rem;
@@ -242,34 +239,93 @@ body {
   font-size: 3rem;
 }
 
-.pricing-sub {
+.header3 {
+  margin-top: 10rem;
+}
+
+.heading-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-heading-text {
   width: 100%;
-  max-width: 550px;
+  max-width: 630px;
+}
+
+.pricing-sub {
   font-size: 1.2rem;
-  margin-left: 22.5rem;
   margin-top: 20px;
   color: #2a668e;
 }
 
 .card-header-content h1 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
+  font-weight: bolder;
 }
 
 .card-group {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: space-between;
+  border: none;
+  border-radius: 10px;
+  place-items: center;
+  margin-top: 3rem;
   gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.header3 {
-  margin-top: 10rem;
+.pricing-nav{
+  padding-left: 0;
 }
 
-.card-header3 {
-  height: 60vh;
+.pricing-nav li {
+  font-weight: lighter !important;
+  font-size: 1.2rem;
+  line-height: 50px;
 }
 
-.card-header3  div {
-  position:relative !important;
+.check-icon{
+  margin-right: 10px ;
 }
+
+.pricing-header-logo{
+  filter: drop-shadow(0px 0px 20px );
+}
+
+.btn-third{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: #1634ff;
+  font-size: larger;
+  border: 2px solid #1634ff;
+  margin-top: 4rem;
+}
+
+.btn-third:hover{
+  filter: drop-shadow(0px 0px 5px rgb(0, 122, 252));
+  color: rgb(255, 255, 255);
+  background-color: #0011ff;
+  border: 2px solid rgb(0, 122, 252) !important;
+}
+
+.card-body:hover{
+  transform: scale(103%);
+  filter: drop-shadow(0px 0px 10px rgb(0, 129, 209));
+  transition: all .3s ease-in-out;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+
+  .btn-second{width: auto;}
+}
+
+

@@ -1,23 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Fade from "react-reveal/Fade";
 import web from "/img/web.png";
 import seo from "/img/seo.jpg";
 import ui from "/img/ui.png";
-import bg from "/img/fg.png";
-import fg from "/img/bg.png";
 import { BiSolidBookContent } from "react-icons/bi";
 import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import {ParallaxProvider} from 'react-scroll-parallax'
+import { IoCheckmark } from "react-icons/io5";
 
 
 const Home = () => {
+  const parallax = useRef();
+
   return (
     <>
       <Navbar />
+      {/* first section  */}
       <section className="header mt-5">
         <div className="container">
           <div className="header-section">
@@ -44,6 +44,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* second section  */}
       <section className="header2 ">
         <Fade bottom>
           <div className="container header2-section">
@@ -88,103 +90,103 @@ const Home = () => {
         </Fade>
       </section>
 
+      {/* third <section></section> */}
       <section className="header3">
         <div className="container-fluid">
-          <div className="card-header3">
-          <ParallaxProvider>
-          <ParallaxBanner
-      layers={[
-        { image: bg, speed: -20 },
-        {
-          speed: -15,
-          children: (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h1 className="text-8xl text-white font-thin">Hello World!</h1>
-            </div>
-          ),
-        },
-        { image: fg, speed: -10 },
-      ]}
-      className="aspect-[2/1]"
-    />
-          </ParallaxProvider>
-          </div>
+          <div className="card-header3 mx-5"></div>
         </div>
       </section>
 
+      {/* pricing heading */}
       <section className="pricing">
-        <div className="container">
+        <div className="container px-5">
+          <div className="heading-div">
           <Fade bottom>
-            <h1 className="pricing-heading text-center">
+            <h1 className="pricing-heading ">
               There's Nothing to to hold you back
             </h1>
+            <div className="sub-heading-text">
             <p className="text-center pricing-sub">
               Whether you're a solo professional, a small business, or large
               coporation, we have a plan that's best for you.
             </p>
+            </div>
           </Fade>
+          </div>
+        </div>
+      </section>
+
+      {/* pricing details  */}
+      <section>
+        <div className="container">
           <div className="card-group">
             <Fade bottom>
-              <div className="card" style={{ width: "15rem" }}>
+              <div className="card" style={{ width: "20rem", border: '1px solid black', borderRadius:"12px" }}>
                 <div className="card-body">
-                  <div className="card-header-content d-flex justify-content-center align-items-center">
-                    <TbWorldWww size={30} />
-                    <h1 className="mx-2 pt-2">Website Building</h1>
+                  <div className="text-center pricing-header-logo">
+                    <TbWorldWww size={35} />
+                  </div>
+                  <div className="card-header-content d-flex justify-content-start align-items-center">
+                    <h1 className="pt-4">Website Building</h1>
                   </div>
                   <Fade bottom>
                     <ul className="pricing-nav">
-                      <li>Landing Pages</li>
-                      <li>Multi-Page Websites</li>
-                      <li>E-commerce Shop </li>
-                      <li>Web Management</li>
-                      <li>Portoflios</li>
-                      <li>Custom Website</li>
+                      <li><IoCheckmark className="check-icon"/> Landing Pages</li>
+                      <li><IoCheckmark className="check-icon"/> Multi-Page Websites</li>
+                      <li><IoCheckmark className="check-icon"/> E-commerce Shop </li>
+                      <li><IoCheckmark className="check-icon"/> Web Management</li>
+                      <li ><IoCheckmark className="check-icon"/> Custom Website</li>
+                      <li style={{color: "#3b3b3b"}}><IoCheckmark className="check-icon"/> Portoflios</li>
                     </ul>
-                    <div className="btn btn-primary">Know More!</div>
+                    <div className="btn btn-third">Know More!</div>
                   </Fade>
                 </div>
               </div>
             </Fade>
 
             <Fade bottom>
-              <div className="card" style={{ width: "20rem" }}>
+              <div className="card" style={{ width: "20rem", border: '1px solid black', borderRadius:"12px" }}>
                 <div className="card-body">
-                  <div className="card-header-content d-flex justify-content-center align-items-center">
-                    <MdOutlineDesignServices size={30} />
-                    <h1 className="mx-2 pt-2">UX/UI Designing</h1>
+                <div className="text-center pricing-header-logo">
+                    <MdOutlineDesignServices size={35} />
+                  </div>
+                  <div className="card-header-content d-flex justify-content-start align-items-center">
+                    <h1 className="pt-4">UX/UI Designing</h1>
                   </div>
                   <Fade bottom>
                     <ul className="pricing-nav">
-                      <li>User Research & Strategy</li>
-                      <li>App designing</li>
-                      <li>Web Page Designing</li>
-                      <li>CX, UX & BX Design</li>
-                      <li>Portoflio Designing</li>
-                      <li>Custom Work </li>
+                      <li><IoCheckmark className="check-icon"/> User Research & Strategy</li>
+                      <li><IoCheckmark className="check-icon"/> App designing</li>
+                      <li><IoCheckmark className="check-icon"/> Web Page Designing</li>
+                      <li><IoCheckmark className="check-icon"/> CX, UX & BX Design</li>
+                      <li><IoCheckmark className="check-icon"/> Custom Work </li>
+                      <li style={{color: "#3b3b3b"}}><IoCheckmark className="check-icon"/> Portoflio Designing</li>
                     </ul>
-                    <div className="btn btn-primary">Know More!</div>
+                    <div className="btn btn-third">Know More!</div>
                   </Fade>
                 </div>
               </div>
             </Fade>
 
             <Fade bottom>
-              <div className="card" style={{ width: "20rem" }}>
+              <div className="card" style={{ width: "20rem", border: '1px solid black', borderRadius:"12px" }}>
                 <div className="card-body">
-                  <div className="card-header-content d-flex justify-content-center align-items-center">
-                    <BiSolidBookContent size={30} />
-                    <h1 className="mx-2 pt-2">SEO Optimisation</h1>
+                <div className="text-center pricing-header-logo">
+                    <BiSolidBookContent size={35} />
+                  </div>
+                  <div className="card-header-content d-flex justify-content-start align-items-center">
+                    <h1 className=" pt-4">SEO Optimisation</h1>
                   </div>
                   <Fade bottom>
                     <ul className="pricing-nav">
-                      <li>Keyword Research & Strategy</li>
-                      <li>On/Off Page Seo</li>
-                      <li>Organic Search Traffic</li>
-                      <li>Shopify/Ecommerce SEO</li>
-                      <li>Technical SEO</li>
-                      <li>Content Writing</li>
+                      <li><IoCheckmark className="check-icon"/> Keyword Research & Strategy</li>
+                      <li><IoCheckmark className="check-icon"/> On/Off Page Seo</li>
+                      <li><IoCheckmark className="check-icon"/> Organic Search Traffic</li>
+                      <li><IoCheckmark className="check-icon"/> Shopify/Ecommerce SEO</li>
+                      <li><IoCheckmark className="check-icon"/> Technical SEO</li>
+                      <li style={{color: "#3b3b3b"}}><IoCheckmark className="check-icon"/> Content Writing</li>
                     </ul>
-                    <div className="btn btn-primary">Know More!</div>
+                    <div className="btn btn-third">Know More!</div>
                   </Fade>
                 </div>
               </div>
