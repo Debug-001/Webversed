@@ -1,8 +1,7 @@
-import React, { useRef,Component  } from "react";
+import React, { useRef, Component } from "react";
 import Slider from "react-slick";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import Fade from "react-awesome-reveal";
 import web from "/img/web.png";
 import seo from "/img/seo.jpg";
 import ui from "/img/ui.png";
@@ -15,8 +14,11 @@ import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
 
+import { Fade } from "react-awesome-reveal";
+
 const Home = () => {
   const parallax = useRef();
+
   var settings = {
     dots: true,
     infinite: false,
@@ -31,25 +33,25 @@ const Home = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -59,13 +61,13 @@ const Home = () => {
       <section className="header mt-5">
         <div className="container">
           <div className="header-section">
-            <Fade direction="bottom">
+            <Fade direction="up" triggerOnce>
               <h1 className="text-center">
                 Redefining Posibilities: -Transforming Ideas into Reality
               </h1>
             </Fade>
             <div className="sub-header">
-              <Fade bottom>
+              <Fade direction="up">
                 <p className="text-center pt-2">
                   Say goodbye to digital challenges as we effortlessly craft
                   websites, enhance user experiences, and optimize search
@@ -74,7 +76,7 @@ const Home = () => {
                 </p>
               </Fade>
             </div>
-            <Fade bottom>
+            <Fade direction="up">
               <div className="btn btn-primary mt-2">
                 Get quote right now&nbsp; &rarr;
               </div>
@@ -85,7 +87,7 @@ const Home = () => {
 
       {/* second section  */}
       <section className="header2 ">
-        <Fade bottom>
+        <Fade direction="up" triggerOnce>
           <div className="container header2-section">
             <div className="card" style={{ width: "70rem" }}>
               <div className="card-body1">
@@ -95,7 +97,7 @@ const Home = () => {
                     <h2 className="card-text-heading">
                       Impossible is the new Possible!
                     </h2>
-                    <Fade bottom>
+                    <Fade direction="up">
                       <p className="card-text-p pt-3">
                         From building Landing pages to complete E-Commerce
                         Stores, Get top notch UI/UX Designers for your need and
@@ -109,13 +111,13 @@ const Home = () => {
                   <div className="col">
                     <div className="div">
                       <div className="card-images">
-                        <Fade left>
+                        <Fade direction="left">
                           <img src={seo} className="img-1" alt="seo-image" />
                         </Fade>
-                        <Fade top>
+                        <Fade direction="up">
                           <img src={web} className="img-2" alt="web-image" />
                         </Fade>
-                        <Fade right>
+                        <Fade direction="right">
                           <img src={ui} className="img-3" alt="ui-image" />
                         </Fade>
                       </div>
@@ -139,37 +141,43 @@ const Home = () => {
               >
                 <img src={boost} alt="boost-svg" />
               </div>
-              <div className="content-seo px-5">
-                <h1
-                  className="mx-5"
-                  style={{
-                    fontSize: "3.5rem",
-                    marginTop: "3rem",
-                    color: "white",
-                  }}
-                >
-                  Boost Your Online Presence with Expert SEO Optimization
-                </h1>
-                <p
-                  className="px-5"
-                  style={{
-                    fontSize: "1.2rem",
-                    marginTop: "3rem",
-                    color: "rgb(195, 195, 195)",
-                  }}
-                >
-                  Enhance your website's visibility and drive more organic
-                  traffic with our tailored SEO strategies.
-                </p>
-              </div>
+              <Fade direction="up">
+                <div className="content-seo px-5">
+                  <h1
+                    className="mx-5"
+                    style={{
+                      fontSize: "3.5rem",
+                      marginTop: "3rem",
+                      color: "white",
+                    }}
+                  >
+                    Boost Your Online Presence with Expert SEO Optimization
+                  </h1>
+                  <p
+                    className="px-5"
+                    style={{
+                      fontSize: "1.2rem",
+                      marginTop: "3rem",
+                      color: "rgb(195, 195, 195)",
+                    }}
+                  >
+                    Enhance your website's visibility and drive more organic
+                    traffic with our tailored SEO strategies.
+                  </p>
+                </div>
+              </Fade>
             </div>
             <div className="col seo-img-col">
-              <img src={dash} alt="seo-img" />
+              <Fade direction="right">
+                <img src={dash} alt="seo-img" />
+              </Fade>
             </div>
           </div>
           <div className="row">
             <div className="col seo-img-col2">
-              <img className="px-5" src={dash2} alt="seo-img" />
+              <Fade direction="left">
+                <img className="px-5" src={dash2} alt="seo-img" />
+              </Fade>
             </div>
             <div className="col" style={{ backgroundColor: "black" }}>
               <div
@@ -182,28 +190,32 @@ const Home = () => {
                 className="content-seo px-5"
                 style={{ paddingBottom: "5rem" }}
               >
-                <h1
-                  className="mx-5"
-                  style={{
-                    fontSize: "3.5rem",
-                    marginTop: "3rem",
-                    color: "white",
-                  }}
-                >
-                  Crafting Intuitive and Engaging User Experiences
-                </h1>
-                <p
-                  className="px-5"
-                  style={{
-                    fontSize: "1.2rem",
-                    marginTop: "3rem",
-                    color: "rgb(195, 195, 195)",
-                  }}
-                >
-                  Transform your digital platforms with our specialized UI/UX
-                  services. We prioritize user-centric designs that elevate your
-                  brand and user engagement
-                </p>
+                <Fade direction="up">
+                  <h1
+                    className="mx-5"
+                    style={{
+                      fontSize: "3.5rem",
+                      marginTop: "3rem",
+                      color: "white",
+                    }}
+                  >
+                    Crafting Intuitive and Engaging User Experiences
+                  </h1>
+                </Fade>
+                <Fade direction="up">
+                  <p
+                    className="px-5"
+                    style={{
+                      fontSize: "1.2rem",
+                      marginTop: "3rem",
+                      color: "rgb(195, 195, 195)",
+                    }}
+                  >
+                    Transform your digital platforms with our specialized UI/UX
+                    services. We prioritize user-centric designs that elevate
+                    your brand and user engagement
+                  </p>
+                </Fade>
               </div>
             </div>
           </div>
@@ -221,7 +233,7 @@ const Home = () => {
       <section className="pricing">
         <div className="container px-5">
           <div className="heading-div">
-            <Fade bottom>
+            <Fade direction="up">
               <h1 className="pricing-heading ">
                 There's Nothing to to hold you back
               </h1>
@@ -240,7 +252,7 @@ const Home = () => {
       <section>
         <div className="container">
           <div className="card-group">
-            <Fade bottom>
+            <Fade direction="up" triggerOnce>
               <div
                 className="card"
                 style={{
@@ -256,7 +268,7 @@ const Home = () => {
                   <div className="card-header-content d-flex justify-content-start align-items-center">
                     <h1 className="pt-4">Website Building</h1>
                   </div>
-                  <Fade bottom>
+                  <Fade direction="up" >
                     <ul className="pricing-nav">
                       <li>
                         <IoCheckmark className="check-icon" /> Landing Pages
@@ -284,7 +296,7 @@ const Home = () => {
               </div>
             </Fade>
 
-            <Fade bottom>
+            <Fade direction="up" triggerOnce>
               <div
                 className="card"
                 style={{
@@ -300,7 +312,7 @@ const Home = () => {
                   <div className="card-header-content d-flex justify-content-start align-items-center">
                     <h1 className="pt-4">UX/UI Designing</h1>
                   </div>
-                  <Fade bottom>
+                  <Fade direction="up">
                     <ul className="pricing-nav">
                       <li>
                         <IoCheckmark className="check-icon" /> User Research &
@@ -331,7 +343,7 @@ const Home = () => {
               </div>
             </Fade>
 
-            <Fade bottom>
+            <Fade direction="up" triggerOnce>
               <div
                 className="card"
                 style={{
@@ -347,7 +359,7 @@ const Home = () => {
                   <div className="card-header-content d-flex justify-content-start align-items-center">
                     <h1 className=" pt-4">SEO Optimisation</h1>
                   </div>
-                  <Fade bottom>
+                  <Fade direction="up">
                     <ul className="pricing-nav">
                       <li>
                         <IoCheckmark className="check-icon" /> Keyword Research
@@ -383,7 +395,7 @@ const Home = () => {
       {/* our partner brands  */}
       <section className="mt-5 mb-5">
         <div className="">
-        {/* <div>
+          {/* <div>
         <h2> Responsive </h2>
         <Slider {...settings}>
           <div>

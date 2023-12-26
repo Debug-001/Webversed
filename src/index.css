@@ -253,15 +253,18 @@ body {
 }
 
 .img-1 {
+  margin-left: 8rem;
   margin-top: 4rem;
   width: 50% !important;
 }
 .img-2 {
-  margin-top: -50px;
+  margin-left: 2rem;
+  /* margin-top: -0px; */
   width: 50% !important;
 }
 .img-3 {
-  margin-left: 10rem;
+  margin-top: -15rem;
+  margin-left: 18rem;
   display: flex;
   width: 50% !important;
 }
