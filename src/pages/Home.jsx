@@ -2,7 +2,7 @@ import React, { useRef,Component  } from "react";
 import Slider from "react-slick";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal";
 import web from "/img/web.png";
 import seo from "/img/seo.jpg";
 import ui from "/img/ui.png";
@@ -59,7 +59,7 @@ const Home = () => {
       <section className="header mt-5">
         <div className="container">
           <div className="header-section">
-            <Fade bottom>
+            <Fade direction="bottom">
               <h1 className="text-center">
                 Redefining Posibilities: -Transforming Ideas into Reality
               </h1>
