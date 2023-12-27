@@ -13,6 +13,7 @@ import { BiSolidBookContent } from "react-icons/bi";
 import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
+import BrandSlider from "./BrandSlider";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -169,7 +170,7 @@ const Home = () => {
             </div>
             <div className="col seo-img-col">
               <Fade direction="right">
-                <img src={dash} alt="seo-img" />
+                <img  className="" src={dash} alt="seo-img" />
               </Fade>
             </div>
           </div>
@@ -227,6 +228,10 @@ const Home = () => {
         <div className="container-fluid">
           <div className="card-header3 mx-5"></div>
         </div>
+      </section>
+
+      <section>
+        <BrandSlider/>
       </section>
 
       {/* pricing heading */}
@@ -347,7 +352,7 @@ const Home = () => {
               <div
                 className="card"
                 style={{
-                  width: "20rem",
+                  width: "21.6rem",
                   border: "1px solid black",
                   borderRadius: "12px",
                 }}

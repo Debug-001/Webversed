@@ -2,6 +2,9 @@ import React,{useEffect, useState} from "react";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import Career from "./pages/Career";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
 
 function App() {
   
@@ -30,7 +33,6 @@ function App() {
       setHovering(false);
     };
 
-    // Target elements with the 'btn' class
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach((button) => {
       button.addEventListener('mouseover', handleMouseOver);
@@ -57,6 +59,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/products" element={<Products/>} />
+        <Route path="/about" element={<About/>} />
       </Routes>
     </>
   );

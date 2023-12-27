@@ -403,6 +403,7 @@ body {
 }
 
 .seo-img-col img{
+  margin-left: 7rem;
   border: 10px solid transparent;
   border-radius: 160px !important;
   width: 60%;
@@ -416,4 +417,11 @@ body {
   width: 100%;
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+/* brands page  */
+
+.brands-img{
+  /* height: ; */
+  width: 100%;
 }
