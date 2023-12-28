@@ -1,5 +1,4 @@
-import React, { useRef, Component } from "react";
-import Slider from "react-slick";
+import React, { useRef, Component, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import web from "/img/web.png";
@@ -13,12 +12,24 @@ import { BiSolidBookContent } from "react-icons/bi";
 import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
-import BrandSlider from "./BrandSlider";
+import BrandSlider from "../Components/BrandSlider";
 
 import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   const parallax = useRef();
+
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  const [selectedCardTitle, setSelectedCardTitle] = useState('');
+
+  const handleKnowMoreClick = (title) => {
+    setSelectedCardTitle(title);
+    setPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+  };
 
   var settings = {
     dots: true,
@@ -87,10 +98,10 @@ const Home = () => {
       </section>
 
       {/* second section  */}
-      <section className="header2 ">
+      <section className="header2">
         <Fade direction="up" triggerOnce>
           <div className="container header2-section">
-            <div className="card" style={{ width: "70rem" }}>
+            <div className="card" style={{ width: "100%", maxWidth: "70rem" }}>
               <div className="card-body1">
                 <div className="row px-5">
                   <div className="col">
@@ -111,15 +122,27 @@ const Home = () => {
 
                   <div className="col">
                     <div className="div">
-                      <div className="card-images">
+                      <div className="card-images expanding-container">
                         <Fade direction="left">
-                          <img src={seo} className="img-1" alt="seo-image" />
+                          <img
+                            src={seo}
+                            className="img-1 expanding-image"
+                            alt="seo-image"
+                          />
                         </Fade>
                         <Fade direction="up">
-                          <img src={web} className="img-2" alt="web-image" />
+                          <img
+                            src={web}
+                            className="img-2 expanding-image"
+                            alt="web-image"
+                          />
                         </Fade>
                         <Fade direction="right">
-                          <img src={ui} className="img-3" alt="ui-image" />
+                          <img
+                            src={ui}
+                            className="img-3 expanding-image"
+                            alt="ui-image"
+                          />
                         </Fade>
                       </div>
                     </div>
@@ -170,7 +193,7 @@ const Home = () => {
             </div>
             <div className="col seo-img-col">
               <Fade direction="right">
-                <img  className="" src={dash} alt="seo-img" />
+                <img className="" src={dash} alt="seo-img" />
               </Fade>
             </div>
           </div>
@@ -180,6 +203,7 @@ const Home = () => {
                 <img className="px-5" src={dash2} alt="seo-img" />
               </Fade>
             </div>
+
             <div className="col" style={{ backgroundColor: "black" }}>
               <div
                 className="seo-svg-container pt-5 mx-5 px-5"
@@ -231,7 +255,7 @@ const Home = () => {
       </section>
 
       <section>
-        <BrandSlider/>
+        <BrandSlider />
       </section>
 
       {/* pricing heading */}
@@ -273,7 +297,7 @@ const Home = () => {
                   <div className="card-header-content d-flex justify-content-start align-items-center">
                     <h1 className="pt-4">Website Building</h1>
                   </div>
-                  <Fade direction="up" >
+                  <Fade direction="up">
                     <ul className="pricing-nav">
                       <li>
                         <IoCheckmark className="check-icon" /> Landing Pages
@@ -291,11 +315,11 @@ const Home = () => {
                       <li>
                         <IoCheckmark className="check-icon" /> Custom Website
                       </li>
-                      <li style={{ color: "#3b3b3b" }}>
+                      <li>
                         <IoCheckmark className="check-icon" /> Portoflios
                       </li>
                     </ul>
-                    <div className="btn btn-third">Know More!</div>
+                    <div className="btn btn-third" onClick={() => handleKnowMoreClick('Website Building')}>Know More!</div>
                   </Fade>
                 </div>
               </div>
@@ -305,7 +329,7 @@ const Home = () => {
               <div
                 className="card"
                 style={{
-                  width: "20rem",
+                  width: "20rem"
                   border: "1px solid black",
                   borderRadius: "12px",
                 }}
@@ -397,40 +421,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* our partner brands  */}
-      <section className="mt-5 mb-5">
-        <div className="">
-          {/* <div>
-        <h2> Responsive </h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-        </Slider>
-      </div> */}
-        </div>
-      </section>
       <Footer />
     </>
   );

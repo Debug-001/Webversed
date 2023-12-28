@@ -7,22 +7,20 @@
   cursor: none !important;
 }
 
-*:hover{
-  cursor:none;
+*:hover {
+  cursor: none;
 }
 
-
-.col{
+.col {
   padding-left: 0 !important;
 }
-
 
 .custom-cursor {
   position: fixed;
   border: 2px solid #4e71ff;
   border-radius: 50%;
-  pointer-events: none; 
-  transform: translate(-50%, -50%); 
+  pointer-events: none;
+  transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
   z-index: 9999;
@@ -42,7 +40,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-
 }
 
 .custom-cursor.hover-effect::before {
@@ -52,7 +49,6 @@
   border-radius: 50%;
   animation: ripple 1s infinite;
 }
-
 
 body {
   user-select: none;
@@ -93,7 +89,6 @@ body {
 }
 
 .btn:hover {
-  
   background-color: #000000;
   color: white;
   border: 2px solid rgb(112, 112, 112) !important;
@@ -375,34 +370,40 @@ body {
   }
 }
 
-.available-jobs{
+.available-jobs {
   margin-top: 6rem;
 }
-.available-jobs h2{
+.available-jobs h2 {
   font-size: 2rem;
   font-weight: 100;
 }
 
-.career-sub-heading{
+.career-sub-heading {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-
-.career-cards{
+.career-cards {
   display: flex;
 }
 
-
-.seo-img-col, .seo-img-col2{
-  background-color:  rgb(0,0,0);
+.seo-img-col,
+.seo-img-col2 {
+  overflow: hidden; 
+  background-color: rgb(0, 0, 0);
   display: grid;
   place-items: center;
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(0, 0, 255) 0%, rgb(25, 28, 218) 0%, rgba(63,133,153,1) 100%);;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(0, 0, 255) 0%,
+    rgb(25, 28, 218) 0%,
+    rgba(63, 133, 153, 1) 100%
+  );
 }
 
-.seo-img-col img{
+.seo-img-col img {
   margin-left: 7rem;
   border: 10px solid transparent;
   border-radius: 160px !important;
@@ -411,8 +412,9 @@ body {
   padding-bottom: 5rem;
 }
 
-
-.seo-img-col2 img{
+.seo-img-col2 img {
+  height: 100%;
+  object-fit: cover;
   border: 10px solid transparent;
   width: 100%;
   padding-top: 5rem;
@@ -421,7 +423,55 @@ body {
 
 /* brands page  */
 
-.brands-img{
-  /* height: ; */
+.brands-img {
+  overflow: hidden;
   width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.brand-item {
+  padding: 0 30px;
+}
+
+.brands-img:hover {
+  backdrop-filter: drop-shadow(0px 10px 10px black);
+}
+
+.slick-prev,
+.slick-next {
+  filter: invert(1);
+}
+
+.brand-text{
+  font-weight: 900;
+  font-size: 3rem;
+  opacity: 0.84;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(171deg, #041f3a 54%, rgba(4, 31, 58, 0.68));
+  -webkit-background-clip: text;
+  background-clip: text;
+
+}
+
+.slider-div{
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* CSS for the expanding effect */
+.expanding-container {
+  overflow: hidden; /* To prevent horizontal scroll during animation */
+}
+
+.expanding-image {
+  width: 100%; /* Initially the image will take full width of its container */
+  transition: width 0.5s ease; /* Smooth transition effect for width change */
+}
+
+.expanded {
+  width: 150%; /* When the image is expanded */
 }
