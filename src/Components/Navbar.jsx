@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import logo from "/img/logo.png";
-
 const Navbar = () => {
   useEffect(() => {
     var hamburger = document.querySelector(".hamburger");

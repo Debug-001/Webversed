@@ -20,20 +20,7 @@ const Career = () => {
             </div>
             <div class="container">
               <div class="row career-cards mt-3 d-flex justify-content-start">
-                {/* <div class="col">
-                  <div class="card" style={{width:"18rem"}}>
-                    <div class="card-body1">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                      <a href="#" class="btn btn-primary">
-                        Go somewhere
-                      </a>
-                    </div>
-                  </div>
-                </div> */}
+               
                 <div class="col">
                 <div class="card" style={{width:"25rem"}}>
                     <div class="card-body1">
@@ -41,24 +28,9 @@ const Career = () => {
                       <p class="card-text">
                         Stay up-to-date with our job openings via our Linkedin and Twitter Announcements
                       </p>
-                      {/* <a href="#" class="btn btn-primary">
-                        
-                      </a> */}
                     </div>
                   </div>
                 </div>
-                {/* <div class="col">    <div class="card" style={{width:"18rem"}}>
-                    <div class="card-body1">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                      <a href="#" class="btn btn-primary">
-                        Go somewhere
-                      </a>
-                    </div>
-                  </div></div> */}
               </div>
             </div>
           </div>

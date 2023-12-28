@@ -15,22 +15,19 @@ import { IoCheckmark } from "react-icons/io5";
 import BrandSlider from "../Components/BrandSlider";
 
 import { Fade } from "react-awesome-reveal";
+import Design from "../Components/Design";
 
 const Home = () => {
   const parallax = useRef();
 
-  const [isPopupOpen, setPopupOpen] = useState(false);
-  const [selectedCardTitle, setSelectedCardTitle] = useState('');
+  const [selectedService, setSelectedService] = useState("");
 
-  const handleKnowMoreClick = (title) => {
-    setSelectedCardTitle(title);
-    setPopupOpen(true);
+  const handleServiceSelection = (event, service) => {
+    event.preventDefault();
+    setSelectedService(service);
   };
 
-  const handleClosePopup = () => {
-    setPopupOpen(false);
-  };
-
+  
   var settings = {
     dots: true,
     infinite: false,
@@ -69,6 +66,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
+      <Design/>
       {/* first section  */}
       <section className="header mt-5">
         <div className="container">
@@ -116,7 +114,10 @@ const Home = () => {
                         all everything to rank up your website #1 using our SEO
                         Service.
                       </p>
-                      <div className="btn btn-second">Get a quote Now!</div>
+                      <div className="btn btn-second"   type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo">Get a quote Now!</div>
                     </Fade>
                   </div>
 
@@ -319,17 +320,24 @@ const Home = () => {
                         <IoCheckmark className="check-icon" /> Portoflios
                       </li>
                     </ul>
-                    <div className="btn btn-third" onClick={() => handleKnowMoreClick('Website Building')}>Know More!</div>
+                    <div
+                      className="btn btn-third"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Know More!
+                    </div>
                   </Fade>
                 </div>
               </div>
             </Fade>
-
             <Fade direction="up" triggerOnce>
               <div
                 className="card"
                 style={{
-                  width: "20rem"
+                  width: "20rem",
                   border: "1px solid black",
                   borderRadius: "12px",
                 }}
@@ -361,17 +369,24 @@ const Home = () => {
                       <li>
                         <IoCheckmark className="check-icon" /> Custom Work{" "}
                       </li>
-                      <li style={{ color: "#3b3b3b" }}>
+                      <li>
                         <IoCheckmark className="check-icon" /> Portoflio
                         Designing
                       </li>
                     </ul>
-                    <div className="btn btn-third">Know More!</div>
+                    <div
+                      className="btn btn-third"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Know More!
+                    </div>
                   </Fade>
                 </div>
               </div>
             </Fade>
-
             <Fade direction="up" triggerOnce>
               <div
                 className="card"
@@ -408,15 +423,148 @@ const Home = () => {
                       <li>
                         <IoCheckmark className="check-icon" /> Technical SEO
                       </li>
-                      <li style={{ color: "#3b3b3b" }}>
+                      <li>
                         <IoCheckmark className="check-icon" /> Content Writing
                       </li>
                     </ul>
-                    <div className="btn btn-third">Know More!</div>
+                    <div
+                      className="btn btn-third"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Know More!
+                    </div>
                   </Fade>
                 </div>
               </div>
             </Fade>
+          </div>
+
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="exampleModalLabel">
+                    Send your Query to us. &nbsp; We'll handle the rest.
+                  </h1>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div className="modal-body">
+                  <form>
+                    <div className="mb-3">
+                      <label htmlFor="name" className="col-form-label">
+                        Name:
+                      </label>
+                      <input type="text" className="form-control" id="name" />
+                    </div>
+                    <div className="mb-3">
+                      <label htmlFor="number" className="col-form-label">
+                        Contact No:
+                      </label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        id="contact-num"
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <div className="btn-group">
+                        <button
+                          type="button"
+                          className="btn btn-danger dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Select Service Required!
+                        </button>
+                        <button
+                          type="button"
+                          className="btn btn-fourth mx-3"
+                          style={{
+                            display: selectedService ? "inline-block" : "none",
+                          }}
+                        >
+                          {selectedService || "Selected service"}
+                        </button>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={() =>
+                                handleServiceSelection("Web Development")
+                              }
+                            >
+                              Web Development
+                            </button>
+                          </li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={() =>
+                                handleServiceSelection("UI/UX Design")
+                              }
+                            >
+                              UI/UX Design
+                            </button>
+                          </li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={() =>
+                                handleServiceSelection("SEO Optimisation")
+                              }
+                            >
+                              SEO Optimisation
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mb-3">
+                      <label htmlFor="message" className="col-form-label">
+                        Drop any Additional Message such as your budget etc.
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="message"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" className="btn btn-primary">
+                    Send message
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
