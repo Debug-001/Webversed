@@ -4,6 +4,7 @@ import Footer from "../Components/Footer";
 import web from "/img/web.png";
 import seo from "/img/seo.jpg";
 import ui from "/img/ui.png";
+import card1 from '/img/card1.png'
 import dash from "/img/dash.png";
 import dash2 from "/img/dash2.png";
 import boost from "/img/boost.svg";
@@ -13,21 +14,21 @@ import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
 import BrandSlider from "../Components/BrandSlider";
-
 import { Fade } from "react-awesome-reveal";
 import Design from "../Components/Design";
+
+
+
 
 const Home = () => {
   const parallax = useRef();
 
   const [selectedService, setSelectedService] = useState("");
-
   const handleServiceSelection = (event, service) => {
     event.preventDefault();
     setSelectedService(service);
   };
 
-  
   var settings = {
     dots: true,
     infinite: false,
@@ -66,7 +67,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Design/>
+      <Design />
       {/* first section  */}
       <section className="header mt-5">
         <div className="container">
@@ -87,9 +88,9 @@ const Home = () => {
               </Fade>
             </div>
             <Fade direction="up">
-              <div className="btn btn-primary mt-2">
+              <a className="btn btn-primary mt-2" href="#pricing">
                 Get quote right now&nbsp; &rarr;
-              </div>
+              </a>
             </Fade>
           </div>
         </div>
@@ -114,10 +115,15 @@ const Home = () => {
                         all everything to rank up your website #1 using our SEO
                         Service.
                       </p>
-                      <div className="btn btn-second"   type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      data-bs-whatever="@mdo">Get a quote Now!</div>
+                      <div
+                        className="btn btn-second"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo"
+                      >
+                        Get a quote Now!
+                      </div>
                     </Fade>
                   </div>
 
@@ -255,12 +261,57 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <BrandSlider />
+      <section className="newst-section pb-5">
+        <div className="container mb-5">
+          <div className="newst-text text-center">
+            <h1>Discover Cutting-Edge Frameworks Integrations</h1>
+            <div className="sub-text-newst">
+            <p>
+              At Webversed, we've meticulously crafted a comprehensive suite of
+              cutting-edge solutions tailored to elevate your digital presence.
+              Immerse yourself in intuitive UI/UX designs, robust web
+              development frameworks, and meticulous SEO optimization
+              strategies. Our user-centric approach ensures seamless navigation,
+              engaging aesthetics, and enhanced functionality. With Webversed,
+              transform your online experience, drive traffic, and achieve
+              unparalleled growth. Embrace innovation in design and development
+              with Webversed.
+            </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col mx-5">
+              <div className="card card2-newst">
+                <div className="card-body2">
+                  <h1>Innovative
+                    <em className="ui-design-text"> UI Designs</em></h1>
+                  <p className="pt-2">Our Innovative designs bring your data to life, offering dynamic and customizable visualization.. Uncover trends, identify insights, and make data-driven webpages appear more to life. With Webversed, you have the power to explore the designs like never before.</p>
+                  <img src={card1} className="img-card-body2 mt-4 mx-4"alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card-group-new">
+                <div className="card card-newst">
+                  <div className="card-body2">
+                    <h1>Strategic Web Development</h1>
+                    <p className="pt-2">Unlock the potential of tailored web solutions with Webversed. Navigate intricate digital landscapes with responsive designs, scalable platforms, and optimized functionalities. Partner with Webversed to ensure your online platform aligns with your business vision and goals</p>
+                  </div>
+                </div>
+                <div className="card card-newst mt-5">
+                  <div className="card-body2">
+                    <h1>Optimized SEO Strategies</h1>
+                    <p className="pt-2">Harness the power of effective online visibility with Webversed. Dive into comprehensive keyword research, content optimization, and link-building strategies. With Webversed, position your brand at the forefront of search engine results and drive organic traffic effortlessly.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* pricing heading */}
-      <section className="pricing">
+      <section className="pricing" id="pricing">
         <div className="container px-5">
           <div className="heading-div">
             <Fade direction="up">
@@ -441,7 +492,6 @@ const Home = () => {
               </div>
             </Fade>
           </div>
-
           <div
             className="modal fade"
             id="exampleModal"
@@ -480,6 +530,7 @@ const Home = () => {
                         id="contact-num"
                       />
                     </div>
+
                     <div className="mb-3">
                       <div className="btn-group">
                         <button
@@ -503,6 +554,37 @@ const Home = () => {
                           <li>
                             <button
                               className="dropdown-item"
+                              onClick={(e) =>
+                                handleServiceSelection(e, "Web Development")
+                              }
+                            >
+                              Web Development
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={(e) =>
+                                handleServiceSelection(e, "UI/UX Design")
+                              }
+                            >
+                              UI/UX Design
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={(e) =>
+                                handleServiceSelection(e, "SEO Optimisation")
+                              }
+                            >
+                              SEO Optimisation
+                            </button>
+                          </li>
+
+                          {/* <li>
+                            <button
+                              className="dropdown-item"
                               onClick={() =>
                                 handleServiceSelection("Web Development")
                               }
@@ -510,9 +592,11 @@ const Home = () => {
                               Web Development
                             </button>
                           </li>
+
                           <li>
                             <hr className="dropdown-divider" />
                           </li>
+
                           <li>
                             <button
                               className="dropdown-item"
@@ -523,9 +607,11 @@ const Home = () => {
                               UI/UX Design
                             </button>
                           </li>
+
                           <li>
                             <hr className="dropdown-divider" />
                           </li>
+
                           <li>
                             <button
                               className="dropdown-item"
@@ -535,10 +621,11 @@ const Home = () => {
                             >
                               SEO Optimisation
                             </button>
-                          </li>
+                          </li> */}
                         </ul>
                       </div>
                     </div>
+
                     <div className="mb-3">
                       <label htmlFor="message" className="col-form-label">
                         Drop any Additional Message such as your budget etc.
@@ -568,6 +655,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="brand-section">
+        <BrandSlider />
+      </section>
+
 
       <Footer />
     </>

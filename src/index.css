@@ -3,7 +3,7 @@
   padding: 0;
   text-decoration: none !important;
   list-style: none;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   cursor: none !important;
 }
 
@@ -31,6 +31,92 @@
   height: 40px;
   background-color: transparent;
   border-color: rgb(45, 136, 255);
+}
+
+.card-group-new {
+  margin-top: 0 !important;
+  width: 15rem !important;
+  display: flex;
+  place-items: start !important;
+  flex-direction: column;
+}
+
+.newst-section {
+  padding-top: 10rem;
+  background-color: #04001f;
+  background-image: linear-gradient(185deg, #07003a, #000),
+    radial-gradient(circle closest-side at 40% 30%, #07003a, #000);
+}
+
+.newst-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.newst-text h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.sub-text-newst {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.newst-text p {
+  color: #8894a8;
+  font-size: 1.1rem;
+}
+
+.card-body2 h1 {
+  color: white;
+}
+
+.ui-design-text {
+  font-style: normal !important;
+  background: -webkit-linear-gradient(#0088ff, #60efff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
+
+.card-body2 p {
+  color: #8894a8;
+  font-size: 1.1rem;
+}
+
+.card-newst {
+  border: 2px solid #3b4251 !important;
+  border-radius: 8px !important;
+  padding: 64px 48px;
+  background-position: 0 0, 50%;
+  background-repeat: repeat, repeat;
+  background: linear-gradient(to top,rgba(36, 103, 236, .16),  rgba(221, 221, 221, 0)), url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  width: 35rem;
+}
+
+.card2-newst {
+  border: 2px solid #3b4251;
+  border-radius: 8px;
+  padding: 64px 48px;
+  background: linear-gradient(to top,rgba(36, 103, 236, .16),  rgba(221, 221, 221, 0)), url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background-position: 0 0, 50%;
+  background-repeat: repeat, repeat;
+  width: 35rem;
+}
+
+.img-card-body2 {
+  width: 25rem;
+  border: 2px solid #3b4251;
+  border-radius: 8px;
 }
 
 .custom-cursor.hover-effect::before,
@@ -165,7 +251,6 @@ body {
 }
 
 .footer-active:hover {
-  /* cursor: pointer; */
   font-size: 1.2rem;
   transform: scale(1.1);
   transition: all 0.25s ease-in-out;
@@ -265,7 +350,7 @@ body {
 }
 
 .pricing {
-  margin-top: 12rem;
+  margin-top: 7rem;
 }
 
 .pricing-heading {
@@ -278,10 +363,6 @@ body {
   -webkit-background-clip: text !important;
   background-clip: text !important;
   font-size: 3rem;
-}
-
-.header3 {
-  margin-top: 10rem;
 }
 
 .heading-div {
@@ -439,22 +520,26 @@ body {
   backdrop-filter: drop-shadow(0px 10px 10px black);
 }
 
-.slick-prev,
-.slick-next {
-  filter: invert(1);
+.brand-section {
+  margin: 4rem;
+  padding: 4rem !important;
+  padding-top: 10rem;
+  padding-bottom: 8rem !important;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgb(143, 143, 143);
+  background-color: #04001f;
+  background-image: linear-gradient(185deg, #07003a, #000),
+    radial-gradient(circle closest-side at 40% 30%, #07003a, #000);
 }
 
 .brand-text {
-  /* font-weight: 100; */
+  font-weight: 900;
   font-size: 3rem;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(
-    120deg,
-    #041f3a 65%,
-    rgba(121, 121, 121, 0.02)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
+  background: -webkit-linear-gradient(#ecf4fb, hsl(186, 100%, 79%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .slider-div {
