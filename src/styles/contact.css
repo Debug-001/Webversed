@@ -1,0 +1,58 @@
+/* contact page css  */
+
+.contact {
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 17%),
+    linear-gradient(to top, #c3dfff, rgba(211, 170, 170, 0) 17%),
+    linear-gradient(to bottom, rgba(215, 243, 255, 0.93), rgba(206, 232, 255, 0.36)),
+    url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background-size: auto, auto, auto;
+}
+
+.contact-text {
+  margin-top: 4rem;
+}
+
+.contact-text h1 {
+  font-size: 4rem;
+}
+
+.contact-text p {
+  font-size: 1.2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form input {
+    padding-left:10px ;
+    color: black !important;
+    height: 7vh;
+  border: 2px solid rgb(127, 127, 127);
+  border-radius: 2px; 
+}
+
+.contact-form input:hover{
+  border: 2px solid rgb(0, 153, 255);
+  border-radius: 2px; 
+}
+
+.contact-form input::placeholder {
+    /* color: black; */
+  padding: 1.1rem !important;
+}
+
+.contact-btn{
+    font-size: 1.1rem;
+    width: 10rem;
+}
+
+.contact-btn:hover{
+   color:  #041f31;
+   background: transparent;
+   border: 2px solid  #041f31;
+   transition: all .25s;
+}
+

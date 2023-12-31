@@ -33,7 +33,7 @@ function App() {
       setHovering(false);
     };
 
-    const buttons = document.querySelectorAll('.btn');
+    const buttons = document.querySelectorAll('.btn, .input-feilds');
     buttons.forEach((button) => {
       button.addEventListener('mouseover', handleMouseOver);
       button.addEventListener('mouseout', handleMouseOut);
