@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 import web from "/img/web.png";
 import seo from "/img/seo.jpg";
 import ui from "/img/ui.png";
-import card1 from '/img/card1.png'
+import card1 from "/img/card1.png";
 import dash from "/img/dash.png";
 import dash2 from "/img/dash2.png";
 import boost from "/img/boost.svg";
@@ -16,9 +16,6 @@ import { IoCheckmark } from "react-icons/io5";
 import BrandSlider from "../Components/BrandSlider";
 import { Fade } from "react-awesome-reveal";
 import Design from "../Components/Design";
-
-
-
 
 const Home = () => {
   const parallax = useRef();
@@ -263,45 +260,82 @@ const Home = () => {
 
       <section className="newst-section pb-5">
         <div className="container mb-5">
-          <div className="newst-text text-center">
-            <h1>Discover Cutting-Edge Frameworks Integrations</h1>
-            <div className="sub-text-newst">
-            <p>
-              At Webversed, we've meticulously crafted a comprehensive suite of
-              cutting-edge solutions tailored to elevate your digital presence.
-              Immerse yourself in intuitive UI/UX designs, robust web
-              development frameworks, and meticulous SEO optimization
-              strategies. Our user-centric approach ensures seamless navigation,
-              engaging aesthetics, and enhanced functionality. With Webversed,
-              transform your online experience, drive traffic, and achieve
-              unparalleled growth. Embrace innovation in design and development
-              with Webversed.
-            </p>
+          <Fade direction="up">
+            <div className="newst-text text-center">
+              <h1>Discover Cutting-Edge Frameworks Integrations</h1>
+              <div className="sub-text-newst">
+                <p>
+                  At Webversed, we've meticulously crafted a comprehensive suite
+                  of cutting-edge solutions tailored to elevate your digital
+                  presence. Immerse yourself in intuitive UI/UX designs, robust
+                  web development frameworks, and meticulous SEO optimization
+                  strategies. Our user-centric approach ensures seamless
+                  navigation, engaging aesthetics, and enhanced functionality.
+                  With Webversed, transform your online experience, drive
+                  traffic, and achieve unparalleled growth. Embrace innovation
+                  in design and development with Webversed.
+                </p>
+              </div>
             </div>
-          </div>
+          </Fade>
+
           <div className="row">
-            <div className="col mx-5">
-              <div className="card card2-newst">
+            <div className="col">
+              <div className="card card2-newst mx-3 mt-5">
                 <div className="card-body2">
-                  <h1>Innovative
-                    <em className="ui-design-text"> UI Designs</em></h1>
-                  <p className="pt-2">Our Innovative designs bring your data to life, offering dynamic and customizable visualization.. Uncover trends, identify insights, and make data-driven webpages appear more to life. With Webversed, you have the power to explore the designs like never before.</p>
-                  <img src={card1} className="img-card-body2 mt-4 mx-4"alt="" />
+                  <Fade direction="up">
+                    <h1>
+                      Innovative
+                      <em className="ui-design-text"> UI Designs</em>
+                    </h1>
+                    <p className="pt-2">
+                      Our Innovative designs bring your data to life, offering
+                      dynamic and customizable visualization.. Uncover trends,
+                      identify insights, and make data-driven webpages appear
+                      more to life. With Webversed, you have the power to
+                      explore the designs like never before.
+                    </p>
+                  </Fade>
+                  <div className="card-container d-flex justify-content-center">
+                    <Fade direction="up">
+                      <img src={card1} className="img-card-body2 mt-4" alt="" />
+                    </Fade>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="card-group-new">
-                <div className="card card-newst">
+                <div className="card card-newst mt-5 mx-3">
                   <div className="card-body2">
+                  <Fade direction="up">
+
                     <h1>Strategic Web Development</h1>
-                    <p className="pt-2">Unlock the potential of tailored web solutions with Webversed. Navigate intricate digital landscapes with responsive designs, scalable platforms, and optimized functionalities. Partner with Webversed to ensure your online platform aligns with your business vision and goals</p>
+                    <p className="pt-2">
+                      Unlock the potential of tailored web solutions with
+                      Webversed. Navigate intricate digital landscapes with
+                      responsive designs, scalable platforms, and optimized
+                      functionalities. Partner with Webversed to ensure your
+                      online platform aligns with your business vision and goals
+                    </p>
+          </Fade>
+
                   </div>
                 </div>
-                <div className="card card-newst mt-5">
+                <div className="card card-newst mt-5 mx-3">
                   <div className="card-body2">
+                  <Fade direction="up">
+
                     <h1>Optimized SEO Strategies</h1>
-                    <p className="pt-2">Harness the power of effective online visibility with Webversed. Dive into comprehensive keyword research, content optimization, and link-building strategies. With Webversed, position your brand at the forefront of search engine results and drive organic traffic effortlessly.</p>
+                    <p className="pt-2">
+                      Harness the power of effective online visibility with
+                      Webversed. Dive into comprehensive keyword research,
+                      content optimization, and link-building strategies. With
+                      Webversed, position your brand at the forefront of search
+                      engine results and drive organic traffic effortlessly.
+                    </p>
+          </Fade>
+
                   </div>
                 </div>
               </div>
@@ -656,10 +690,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="brand-section">
+      <section className="container brand-section">
         <BrandSlider />
       </section>
-
 
       <Footer />
     </>

@@ -21,32 +21,53 @@ const Footer = () => {
                     alt="logo-img"
                   />
                 </a>
-                <h1 className="px-4 pt-3">Webversed</h1>
+                <h1 className="pt-3">Webversed</h1>
               </div>
-              <p className="px-5 mx-2 pt-4" style={{fontSize:"1.1rem"}}>
+              <p className=" mx-2 pt-4" style={{ fontSize: "1.1rem" }}>
                 At Webversed, We focus on bringing your innovative Ideas to
                 Life.
               </p>
-              <p style={{ color: "#000",fontSize:"1.1rem" }} className="px-5 mx-2">
+              <p style={{ color: "#000", fontSize: "1.1rem" }} className="mx-2">
                 #Your Vision, Our Mission: Webversed - Where Ideas Blossom
               </p>
             </div>
             <div className="col-sm pt-4">
-              <h1 className="mx-5 pt-3">Company</h1>
-              <ul className="footer-link px-5">
-                <li className="footer-active hover-underline-animation">Services</li>
-                <li className="footer-active hover-underline-animation">Prices</li>
-                <li className="footer-active hover-underline-animation">About Us</li>
-                <li className="footer-active hover-underline-animation">Career</li>
+              <h1 className=" pt-3">Company</h1>
+              <ul className="footer-link">
+                <li className="footer-active hover-underline-animation">
+                  <a href="/contact">Services</a>
+                </li>
+                <li className="footer-active hover-underline-animation">
+                  <a href="/contact">Contact US</a>
+                </li>
+                <li className="footer-active hover-underline-animation">
+                  <a href="/aboutus">About Us</a>
+                </li>
+                <li className="footer-active hover-underline-animation">
+                  <a href="/career">Career</a>
+                </li>
               </ul>
             </div>
             <div className="col-sm pt-4">
               <h1 className="pt-3">Connect with us</h1>
               <ul className="footer-link px-1">
-                <li className="footer-active hover-underline-animation"><FaLinkedin className="mt-1"/>&nbsp;Linkedin</li>
-                <li className="footer-active hover-underline-animation"> <GrInstagram className="mt-1"/>&nbsp;Instagram</li>
-                <li className="footer-active hover-underline-animation"><FaTwitterSquare className="mt-1"/>&nbsp;Twitter</li>
-                <li className="footer-active hover-underline-animation"><FaTelegram className="mt-1"/>&nbsp;Telegram</li>
+                <li className="footer-active hover-underline-animation">
+                  <FaLinkedin className="mt-1" />
+                  &nbsp;Linkedin
+                </li>
+                <li className="footer-active hover-underline-animation">
+                  {" "}
+                  <GrInstagram className="mt-1" />
+                  &nbsp;Instagram
+                </li>
+                <li className="footer-active hover-underline-animation">
+                  <FaTwitterSquare className="mt-1" />
+                  &nbsp;Twitter
+                </li>
+                <li className="footer-active hover-underline-animation">
+                  <FaTelegram className="mt-1" />
+                  &nbsp;Telegram
+                </li>
               </ul>
             </div>
           </div>

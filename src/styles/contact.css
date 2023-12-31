@@ -12,6 +12,23 @@
   background-size: auto, auto, auto;
 }
 
+.accordion-item {
+  border: 1px solid #b4b6b8;
+  border-radius: 4px;
+}
+.accordion-item:hover {
+  border: 1px solid #0c63e4;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+.accordion-body {
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0) 17%),
+    linear-gradient(#feffff, rgba(211, 170, 170, 0) 17%),
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(206, 232, 255, 0.36)),
+    url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background-size: auto, auto, auto;
+}
+
 .contact-text {
   margin-top: 4rem;
 }
@@ -58,7 +75,7 @@
 
 .contact-img {
   width: 100%;
-  margin-left: 10rem;
+  /* margin-left: 10rem; */
   border: 1px solid rgb(170, 170, 176);
   border-radius: 6px;
 }
@@ -71,11 +88,26 @@
   padding-top: 10rem;
 }
 
-.qa-text h1{
-    font-weight: bolder;
-    font-size: 3rem;
+.qa-text h1 {
+  font-weight: bolder;
+  font-size: 3rem;
 }
 
-.accordion{
-    width: 30rem;
+.second-accord,
+.accordion {
+  width: 38.5rem;
+}
+
+.contact-below {
+  padding-top: 6rem;
+}
+
+.card-body-con {
+  border: 1px solid #b6b6b6;
+  padding: 1rem;
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0) 17%),
+    linear-gradient(#feffff, rgba(211, 170, 170, 0) 17%),
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(206, 232, 255, 0.36)),
+    url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background-size: auto, auto, auto;
 }

@@ -34,8 +34,6 @@
 }
 
 .card-group-new {
-  margin-top: 0 !important;
-  width: 15rem !important;
   display: flex;
   place-items: start !important;
   flex-direction: column;
@@ -114,7 +112,7 @@
 }
 
 .img-card-body2 {
-  width: 25rem;
+  width: 18rem;
   border: 2px solid #3b4251;
   border-radius: 8px;
 }
@@ -234,7 +232,8 @@ body {
 
 .logo-section {
   display: flex;
-  justify-content: center;
+  gap: 2rem;
+  justify-content: start;
   align-items: center;
 }
 
@@ -242,7 +241,12 @@ body {
   padding-left: 0;
 }
 
+.footer-active a {
+  color: black !important;
+}
+
 .footer-active {
+  color: black !important;
   padding-top: 1rem;
   font-size: 1.2rem;
   max-width: 22%;
@@ -521,10 +525,9 @@ body {
 }
 
 .brand-section {
-  margin: 4rem;
-  padding: 4rem !important;
-  padding-top: 10rem;
-  padding-bottom: 8rem !important;
+  padding: 2rem;
+  padding-top:6rem;
+  padding-bottom: 6rem;
   margin-top: 5rem;
   margin-bottom: 1rem;
   border-radius: 8px;
