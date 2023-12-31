@@ -3,7 +3,11 @@
 .contact {
   background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 17%),
     linear-gradient(to top, #c3dfff, rgba(211, 170, 170, 0) 17%),
-    linear-gradient(to bottom, rgba(215, 243, 255, 0.93), rgba(206, 232, 255, 0.36)),
+    linear-gradient(
+      to bottom,
+      rgba(215, 243, 255, 0.93),
+      rgba(206, 232, 255, 0.36)
+    ),
     url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
   background-size: auto, auto, auto;
 }
@@ -27,32 +31,51 @@
 }
 
 .contact-form input {
-    padding-left:10px ;
-    color: black !important;
-    height: 7vh;
-  border: 2px solid rgb(127, 127, 127);
-  border-radius: 2px; 
+  background: transparent;
+  padding-left: 10px;
+  color: black !important;
+  height: 7vh;
+  border: 2px solid rgb(170, 170, 176);
+  border-radius: 2px;
 }
 
-.contact-form input:hover{
+.contact-form input:hover {
   border: 2px solid rgb(0, 153, 255);
-  border-radius: 2px; 
+  border-radius: 2px;
 }
 
-.contact-form input::placeholder {
-    /* color: black; */
-  padding: 1.1rem !important;
+.contact-btn {
+  font-size: 1.1rem;
+  width: 10rem;
 }
 
-.contact-btn{
-    font-size: 1.1rem;
-    width: 10rem;
+.contact-btn:hover {
+  color: #041f31;
+  background: transparent;
+  border: 2px solid #041f31;
+  transition: all 0.25s;
 }
 
-.contact-btn:hover{
-   color:  #041f31;
-   background: transparent;
-   border: 2px solid  #041f31;
-   transition: all .25s;
+.contact-img {
+  width: 100%;
+  margin-left: 10rem;
+  border: 1px solid rgb(170, 170, 176);
+  border-radius: 6px;
 }
 
+.qa-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 45rem;
+  padding-top: 10rem;
+}
+
+.qa-text h1{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.accordion{
+    width: 30rem;
+}
