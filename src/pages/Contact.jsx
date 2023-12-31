@@ -4,6 +4,8 @@ import Footer from "../Components/Footer";
 import contactimg from "/img/contact-img.png";
 import "../styles/contact.css";
 import PhoneInput from "react-phone-number-input";
+import { Fade } from "react-awesome-reveal";
+import Design from "../Components/Design";
 
 const Contact = () => {
   const [value, setValue] = useState();
@@ -11,63 +13,79 @@ const Contact = () => {
   return (
     <>
       <Navbar />
+      <Design />
       <section className="contact">
         <div className="container  p-5">
           <div className="row">
             <div className="col-sm-6">
               <div className="contact-text">
-                <h1> Get in Touch with Us</h1>
-                <p className="pt-2">
-                  We're here to help. Whether you have questions, need
-                  assistance, or just want to connect, don't hesitate to reach
-                  out to us.
-                </p>
+                <Fade direction="left">
+                  <h1> Get in Touch with Us</h1>
+                  <p className="pt-2">
+                    We're here to help. Whether you have questions, need
+                    assistance, or just want to connect, don't hesitate to reach
+                    out to us.
+                  </p>
+                </Fade>
               </div>
               <div className="contact-form">
-                <input
-                  className="input-feilds"
-                  type="text"
-                  name="fname"
-                  id="fname"
-                  placeholder="Enter your name"
-                />
-                <input
-                  className="input-feilds"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter your Email"
-                />
-                <input
-                  type="number"
-                  name="number"
-                  id="number"
-                  placeholder="Enter your Contact Number"
-                />
+                <Fade direction="left">
+                  <input
+                    className="input-feilds"
+                    type="text"
+                    name="fname"
+                    id="fname"
+                    placeholder="Enter your name"
+                  />
+                </Fade>
+                <Fade direction="left">
+                  <input
+                    className="input-feilds"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your Email"
+                  />
+                </Fade>
+                <Fade direction="left">
+                  <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    placeholder="Enter your Contact Number"
+                  />
+                </Fade>
+
                 {/* <PhoneInput
                  className="phip"
                   placeholder="Enter phone number"
                   value={value}
                   onChange={setValue}
                 /> */}
-                <input
-                  style={{ minHeight: "196px" }}
-                  className="input-feilds"
-                  type="text"
-                  name="message"
-                  id="message"
-                  placeholder="How can we help you"
-                />
-                <button
-                  className="btn contact-btn"
-                  //  onClick={submit}
-                >
-                  Submit
-                </button>
+                <Fade direction="left">
+                  <input
+                    style={{ minHeight: "196px" }}
+                    className="input-feilds"
+                    type="text"
+                    name="message"
+                    id="message"
+                    placeholder="How can we help you"
+                  />
+                </Fade>
+                <Fade direction="left">
+                  <button
+                    className="btn contact-btn"
+                    //  onClick={submit}
+                  >
+                    Submit
+                  </button>
+                </Fade>
               </div>
             </div>
             <div className="col-sm-6 d-flex align-items-center justify-content-center">
-              <img className="contact-img mt-5" src={contactimg} alt="" />
+              <Fade direction="right">
+                <img className="contact-img mt-5" src={contactimg} alt="" />
+              </Fade>
             </div>
           </div>
         </div>
@@ -76,12 +94,14 @@ const Contact = () => {
       <section className="container">
         <div className="container d-flex justify-content-center">
           <div className="qa-text">
+            <Fade direction="up">
             <h1 className="text-center">Common Questions and Answers</h1>
             <p className="pt-2 px-4">
               Looking for quick answers? Check out our FAQ for concise
               explanations to common questions. Can't find what you're looking
               for? Our support team is just a message away, ready to assist you.
             </p>
+            </Fade>
           </div>
         </div>
 
@@ -274,12 +294,32 @@ const Contact = () => {
           <div className="card-body-con">
             <div className="row">
               <div className="col mx-5 pt-5 pb-4">
+              <Fade direction="up">        
                 <h2 className="">Build your dream with Webversed</h2>
-                <p className="">We're here to help you scale your dream business the boundaries of financial success. Contact us now and get it done right now.</p>
+              </Fade>
+              <Fade direction="up">
+                <p className="">
+                  We're here to help you scale your dream business the
+                  boundaries of financial success. Contact us now and get it
+                  done right now.
+                </p>
+              </Fade>
               </div>
               <div className="col d-flex justify-content-center align-items-center">
                 <div className="btn-container">
-                <a href="/" className="btn btn-primary" style={{width:"20rem", padding:"1.3rem", fontSize:"1.3rem"}}>Get Started for Free</a>
+                  <Fade direction="up">
+                  <a
+                    href="/"
+                    className="btn btn-primary"
+                    style={{
+                      width: "20rem",
+                      padding: "1.3rem",
+                      fontSize: "1.3rem",
+                    }}
+                  >
+                    Get Started for Free
+                  </a>
+                  </Fade>
                 </div>
               </div>
             </div>

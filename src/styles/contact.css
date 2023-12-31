@@ -54,6 +54,9 @@
   height: 7vh;
   border: 2px solid rgb(170, 170, 176);
   border-radius: 2px;
+  /* width: 22rem; */
+  width: 100%;
+
 }
 
 .contact-form input:hover {
