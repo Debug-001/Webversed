@@ -42,7 +42,7 @@
 .newst-section {
   padding-top: 10rem;
   background-color: #04001f;
-  background-image: linear-gradient(185deg, #07003a, #000),
+  background-image: linear-gradient(185deg, #07003a, rgb(25, 36, 48)),
     radial-gradient(circle closest-side at 40% 30%, #07003a, #000);
 }
 
@@ -109,6 +109,7 @@
   background-position: 0 0, 50%;
   background-repeat: repeat, repeat;
   width: 35rem;
+  overflow: hidden;
 }
 
 .img-card-body2 {
@@ -305,20 +306,38 @@ body {
 }
 
 .card-body1 {
-  padding: 2rem;
+  padding-top: 1.5rem;
+  padding-left: 1.4rem;
+  padding-bottom: 1.4rem;
+  padding-right: 1.4rem;
+  /* padding: 1.2rem; */
   color: white;
   height: auto;
+  border: 1px solid grey !important;
   background-color: #04001f;
-  background-image: linear-gradient(185deg, #07003a, #000),
-    radial-gradient(circle closest-side at 40% 30%, #07003a, #000);
+  background-image: linear-gradient(185deg, #07003a, #36393f),
+    radial-gradient(circle closest-side at 40% 30%, #3e3d42, #181818);
   border-radius: 10px;
 }
+
+.card-body1:hover{
+  transform: scale(1.05);
+  transition: all .25s;
+}
+
+.card-body1:hover ~ .card{
+filter: opacity(.99);
+ /* fui opacity: 0.99 !important;  */
+}
+
 
 .card-top-heading {
   padding-top: 4rem !important;
   font-size: larger;
   color: #a9a9a9;
 }
+
+
 
 .card-text-heading {
   font-weight: bolder;
@@ -358,6 +377,8 @@ body {
 }
 
 .pricing-heading {
+  font-size: 3.5rem !important;
+  font-weight: 600;
   -webkit-text-fill-color: transparent !important;
   background-image: linear-gradient(
     173deg,

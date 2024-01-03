@@ -2,6 +2,19 @@
 
 .contact {
   background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 17%),
+    linear-gradient(to top, #dbe8f7, rgba(211, 170, 170, 0) 17%),
+    linear-gradient(
+      to bottom,
+      rgba(215, 243, 255, 0.93),
+      rgba(206, 232, 255, 0.36)
+    ),
+    url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background-size: auto, auto, auto;
+}
+
+.footer-section {
+  padding-top: 2rem;
+  background: linear-gradient(to bottom, hsl(209, 95%, 94%), rgba(255, 255, 255, 0) 17%),
     linear-gradient(to top, #c3dfff, rgba(211, 170, 170, 0) 17%),
     linear-gradient(
       to bottom,
@@ -10,6 +23,22 @@
     ),
     url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
   background-size: auto, auto, auto;
+}
+
+.text-group {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.text-group p {
+  max-width: 43rem;
+  font-size: 1.06rem;
+}
+.text-group h1 {
+  font-weight: 600;
 }
 
 .accordion-item {
@@ -56,7 +85,6 @@
   border-radius: 2px;
   /* width: 22rem; */
   width: 100%;
-
 }
 
 .contact-form input:hover {
@@ -113,4 +141,33 @@
     linear-gradient(rgba(255, 255, 255, 0.93), rgba(206, 232, 255, 0.36)),
     url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
   background-size: auto, auto, auto;
+}
+
+/* services page css  */
+
+.service {
+  padding-top: 1rem;
+}
+
+.service > .container {
+  position: relative;
+  width: 20%; /* Adjust as necessary */
+  aspect-ratio: 1/1;
+  z-index: 1; /* Ensure the container is above the particles */
+}
+
+.worm-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  filter: opacity(0.2);
+  border: 2px solid transparent;
+  border-radius: 50%;
+  z-index: -9999;
+}
+
+.service-heading {
+  z-index: 9999; /* Ensure the heading appears above the particles and image */
 }

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import logo from "/img/logo.png";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   useEffect(() => {
     var hamburger = document.querySelector(".hamburger");
@@ -17,17 +19,17 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
         <div className="logo-section">
-          <a href="/">
+          <Link to="/">
             <img
               className=""
               style={{ width: "55px" }}
               src={logo}
               alt="logo-img"
             />
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <h2 className="logo-text mx-3 pt-2">Webversed</h2>
-          </a>
+          </Link>
         </div>
         <button
           className="hamburger hamburger--emphatic navbar-toggler"
@@ -46,50 +48,50 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0">
             <li className="nav-item mx-3">
-              <a
+              <Link
                 className="nav-link active hover-underline-animation"
                 aria-current="page"
-                href="/"
+                to="/"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-3">
               <a
                 className="nav-link active hover-underline-animation"
-                href="/services"
+                href="#services"
               >
                 Services
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a
+              <Link
                 className="nav-link active hover-underline-animation"
-                href="/pricing"
+                to="/pricing"
               >
                 Pricing
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-3">
-              <a
+              <Link
                 className="nav-link active hover-underline-animation"
-                href="/career"
+                to="/career"
               >
                 Career
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-3">
-              <a
+              <Link
                 className="nav-link active hover-underline-animation"
-                href="/about"
+                to="/about"
               >
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
-          <a href="/contact">
+          <Link to="/contact">
             <div className="btn btn-primary">Contact Us</div>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

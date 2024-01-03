@@ -16,10 +16,10 @@ import { IoCheckmark } from "react-icons/io5";
 import BrandSlider from "../Components/BrandSlider";
 import { Fade } from "react-awesome-reveal";
 import Design from "../Components/Design";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const parallax = useRef();
-
   const [selectedService, setSelectedService] = useState("");
   const handleServiceSelection = (event, service) => {
     event.preventDefault();
@@ -85,9 +85,9 @@ const Home = () => {
               </Fade>
             </div>
             <Fade direction="up">
-              <a className="btn btn-primary mt-2" href="#pricing">
+              <Link className="btn btn-primary mt-2" to="/pricing">
                 Get quote right now&nbsp; &rarr;
-              </a>
+              </Link>
             </Fade>
           </div>
         </div>
@@ -112,15 +112,13 @@ const Home = () => {
                         all everything to rank up your website #1 using our SEO
                         Service.
                       </p>
-                      <div
+                      <li>
+                      <Link to='/pricing'
                         className="btn btn-second"
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo"
                       >
                         Get a quote Now!
-                      </div>
+                      </Link>
+                      </li>
                     </Fade>
                   </div>
 
@@ -345,7 +343,7 @@ const Home = () => {
       </section>
 
       {/* pricing heading */}
-      <section className="pricing" id="pricing">
+      <section className="pricing" id="services">
         <div className="container px-5">
           <div className="heading-div">
             <Fade direction="up">
@@ -364,7 +362,7 @@ const Home = () => {
       </section>
 
       {/* pricing details  */}
-      <section>
+      <section id="services">
         <div className="container">
           <div className="card-group">
             <Fade direction="up" triggerOnce>
@@ -405,7 +403,7 @@ const Home = () => {
                         <IoCheckmark className="check-icon" /> Portoflios
                       </li>
                     </ul>
-                    <div
+                    <Link to='/pricing'
                       className="btn btn-third"
                       type="button"
                       data-bs-toggle="modal"
@@ -413,7 +411,7 @@ const Home = () => {
                       data-bs-whatever="@mdo"
                     >
                       Know More!
-                    </div>
+                    </Link>
                   </Fade>
                 </div>
               </div>
@@ -459,7 +457,7 @@ const Home = () => {
                         Designing
                       </li>
                     </ul>
-                    <div
+                    <Link to='/pricing'
                       className="btn btn-third"
                       type="button"
                       data-bs-toggle="modal"
@@ -467,7 +465,7 @@ const Home = () => {
                       data-bs-whatever="@mdo"
                     >
                       Know More!
-                    </div>
+                    </Link>
                   </Fade>
                 </div>
               </div>
@@ -512,7 +510,7 @@ const Home = () => {
                         <IoCheckmark className="check-icon" /> Content Writing
                       </li>
                     </ul>
-                    <div
+                    <Link to='/pricing'
                       className="btn btn-third"
                       type="button"
                       data-bs-toggle="modal"
@@ -520,7 +518,7 @@ const Home = () => {
                       data-bs-whatever="@mdo"
                     >
                       Know More!
-                    </div>
+                    </Link>
                   </Fade>
                 </div>
               </div>

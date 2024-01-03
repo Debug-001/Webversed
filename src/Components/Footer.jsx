@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "/img/logo.png";
+import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaTwitterSquare } from "react-icons/fa";
@@ -7,20 +8,20 @@ import { FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className="pb-5">
-      <div className="container-fluid px-5 mt-5">
+    <section className="pb-5 footer-section">
+      <div className="container-fluid px-5 pt-2">
         <div>
           <div className="row">
             <div className="col-sm">
               <div className="logo-section">
-                <a href="#">
+                <Link to="/">
                   <img
                     className=""
                     style={{ width: "120px" }}
                     src={logo}
                     alt="logo-img"
                   />
-                </a>
+                </Link>
                 <h1 className="pt-3">Webversed</h1>
               </div>
               <p className=" mx-2 pt-4" style={{ fontSize: "1.1rem" }}>
@@ -35,16 +36,16 @@ const Footer = () => {
               <h1 className=" pt-3">Company</h1>
               <ul className="footer-link">
                 <li className="footer-active hover-underline-animation">
-                  <a href="/contact">Services</a>
+                  <Link to="/contact">Services</Link>
                 </li>
                 <li className="footer-active hover-underline-animation">
-                  <a href="/contact">Contact US</a>
+                  <Link to="/contact">Contact US</Link>
                 </li>
                 <li className="footer-active hover-underline-animation">
-                  <a href="/aboutus">About Us</a>
+                  <Link to="/aboutus">About Us</Link>
                 </li>
                 <li className="footer-active hover-underline-animation">
-                  <a href="/career">Career</a>
+                  <Link to="/career">Career</Link>
                 </li>
               </ul>
             </div>
