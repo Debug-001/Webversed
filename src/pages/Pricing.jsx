@@ -39,6 +39,7 @@ const Pricing = () => {
 
   const handleServiceSelection = (event, service) => {
     event.preventDefault();
+
     setSelectedService(service);
   };
 
@@ -230,7 +231,6 @@ const Pricing = () => {
                   </div>
                 </Fade>
               </div>
-
               <div
                 className="modal fade"
                 id="exampleModal"
@@ -605,13 +605,14 @@ const Pricing = () => {
                 <div className="col d-flex justify-content-center align-items-center">
                   <div className="btn-container">
                     <Fade direction="up">
-                      <a
-                        href="/"
+                      <a href='/pricing'
                         className="btn btn-primary"
                         style={{
-                          width: "20rem",
-                          padding: "1.3rem",
-                          fontSize: "1.3rem",
+                          width: "12rem",
+                          padding: "1rem",
+                          fontSize: "1rem",
+                          marginLeft:"10px",
+                          marginBottom:"1.5rem"
                         }}
                       >
                         Get Started for Free
