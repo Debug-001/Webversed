@@ -72,7 +72,7 @@ const Design = () => {
             number: {
               density: {
                 enable: true,
-                area: 5000,
+                area: 10000,
               },
               value: 80,
             },

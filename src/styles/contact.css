@@ -14,7 +14,7 @@
 
 .footer-section {
   padding-top: 2rem;
-  background: linear-gradient(to bottom, hsl(209, 95%, 94%), rgba(255, 255, 255, 0) 17%),
+  /* background: linear-gradient(to bottom, hsl(209, 95%, 94%), rgba(255, 255, 255, 0) 17%),
     linear-gradient(to top, #c3dfff, rgba(211, 170, 170, 0) 17%),
     linear-gradient(
       to bottom,
@@ -22,7 +22,7 @@
       rgba(206, 232, 255, 0.36)
     ),
     url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
-  background-size: auto, auto, auto;
+  background-size: auto, auto, auto; */
 }
 
 .text-group {
@@ -50,6 +50,7 @@
   border-radius: 4px;
   transition: all 0.4s;
 }
+
 .accordion-body {
   background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0) 17%),
     linear-gradient(#feffff, rgba(211, 170, 170, 0) 17%),
@@ -134,11 +135,12 @@
 }
 
 .card-body-con {
+  border-radius: 4px;
   border: 1px solid #b6b6b6;
   padding: 1rem;
   background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0) 17%),
-    linear-gradient(#feffff, rgba(211, 170, 170, 0) 17%),
-    linear-gradient(rgba(255, 255, 255, 0.93), rgba(206, 232, 255, 0.36)),
+    linear-gradient(#ffffff, rgba(211, 170, 170, 0) 17%),
+    linear-gradient(#5f9fffed, rgba(206, 232, 255, 0.96)),
     url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
   background-size: auto, auto, auto;
 }
