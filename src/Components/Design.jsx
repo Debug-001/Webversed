@@ -21,7 +21,7 @@ const Design = () => {
         loaded={particlesLoaded}
         options={{
           fullScreen: true,
-          fpsLimit: 120,
+          fpsLimit: 30,
           interactivity: {
             events: {
               onClick: {

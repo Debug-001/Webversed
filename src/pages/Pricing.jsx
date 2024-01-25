@@ -7,28 +7,36 @@ import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
 import Design from "../Components/Design";
-import database from './firebase'; 
+import { addQueryToFirestore } from "./firebase";
 
 const Pricing = () => {
+  // const [name, setName] = useState('');
+  // const [contactNum, setContactNum] = useState('');
+  // const [message, setMessage] = useState('');
 
-  const [name, setName] = useState('');
-  const [contactNum, setContactNum] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [contactNum, setContactNum] = useState("");
+  const [selectedService, setSelectedService] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
-    database.ref('queries').push({
-      name,
-      contactNum,
-      selectedService,
-      message,
-    });
-    setName('');
-    setContactNum('');
-    setSelectedService('');
-    setMessage('');
+  const handleSubmit = async () => {
+    try {
+      setName("");
+      setContactNum("");
+      setSelectedService("");
+      setMessage("");
+
+      await addQueryToFirestore({
+        name,
+        contactNum,
+        selectedService,
+        message,
+      });
+    } catch (error) {
+      console.error("Error submitting query: ", error);
+    }
   };
 
-  const [selectedService, setSelectedService] = useState("");
   const handleServiceSelection = (event, service) => {
     event.preventDefault();
     setSelectedService(service);
@@ -222,6 +230,7 @@ const Pricing = () => {
                   </div>
                 </Fade>
               </div>
+
               <div
                 className="modal fade"
                 id="exampleModal"
@@ -252,6 +261,8 @@ const Pricing = () => {
                             type="text"
                             className="form-control"
                             id="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                           />
                         </div>
                         <div className="mb-3">
@@ -262,6 +273,8 @@ const Pricing = () => {
                             type="number"
                             className="form-control"
                             id="contact-num"
+                            value={contactNum}
+                            onChange={(e) => setContactNum(e.target.value)}
                           />
                         </div>
 
@@ -342,19 +355,26 @@ const Pricing = () => {
                             type="text"
                             className="form-control"
                             id="message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
                           />
                         </div>
                       </form>
                     </div>
                     <div className="modal-footer">
                       <button
+                      id="btn-modal"
                         type="button"
-                        className="btn btn-secondary"
+                        className="btn btn-secondary btn-modal-dismiss"
                         data-bs-dismiss="modal"
                       >
                         Close
                       </button>
-                      <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+                      <button
+                        type="button"
+                        className="btn btn-primary"
+                        onClick={handleSubmit}
+                      >
                         Send message
                       </button>
                     </div>
@@ -381,11 +401,11 @@ const Pricing = () => {
           </div>
 
           <div className="d-flex gap-5 mt-5 justify-content-center">
-            <div class="accordion" id="accordionExample1">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+            <div className="accordion" id="accordionExample1">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne1"
@@ -397,10 +417,10 @@ const Pricing = () => {
                 </h2>
                 <div
                   id="collapseOne1"
-                  class="accordion-collapse collapse show"
+                  className="accordion-collapse collapse show"
                   data-bs-parent="#accordionExample1"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     The Price of your Project depends on both the Complexity and
                     the Type of Webpage you need. Let me know about the Details
                     of your Project and I'll be able to create an Offer tailored
@@ -411,10 +431,10 @@ const Pricing = () => {
             </div>
 
             <div className="accordian second-accord" id="accordionExample2">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo2"
@@ -426,10 +446,10 @@ const Pricing = () => {
                 </h2>
                 <div
                   id="collapseTwo2"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   data-bs-parent="#accordionExample2"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     Absolutely! We incorporate SEO best practices into our
                     website design and content to improve your site's visibility
                     on search engines. Additionally, we offer ongoing SEO
@@ -442,11 +462,11 @@ const Pricing = () => {
           </div>
 
           <div className="d-flex gap-5 mt-5 justify-content-center">
-            <div class="accordion" id="accordionExample1">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+            <div className="accordion" id="accordionExample1">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne3"
@@ -458,10 +478,10 @@ const Pricing = () => {
                 </h2>
                 <div
                   id="collapseOne3"
-                  class="accordion-collapse collapse show"
+                  className="accordion-collapse collapse show"
                   data-bs-parent="#accordionExample1"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     Security is a top priority for us. We implement robust
                     security measures, such as SSL certificates, regular
                     backups, and security audits, to protect your website from
@@ -472,10 +492,10 @@ const Pricing = () => {
             </div>
 
             <div className="accordian second-accord" id="accordionExample2">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo4"
@@ -488,10 +508,10 @@ const Pricing = () => {
                 </h2>
                 <div
                   id="collapseTwo4"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   data-bs-parent="#accordionExample2"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     Yes, we can integrate various third-party tools, plugins,
                     and APIs to enhance your website's functionality. Whether
                     you need payment gateways, CRM integration, or social media
@@ -504,11 +524,11 @@ const Pricing = () => {
           </div>
 
           <div className="d-flex gap-5 mt-5 justify-content-center">
-            <div class="accordion" id="accordionExample1">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+            <div className="accordion" id="accordionExample1">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne5"
@@ -520,10 +540,10 @@ const Pricing = () => {
                 </h2>
                 <div
                   id="collapseOne5"
-                  class="accordion-collapse collapse show"
+                  className="accordion-collapse collapse show"
                   data-bs-parent="#accordionExample1"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     We specialize in designing and developing various types of
                     websites, including e-commerce sites, informational blogs,
                     portfolio websites, and more. Let us know your specific
@@ -535,10 +555,10 @@ const Pricing = () => {
             </div>
 
             <div className="accordian second-accord" id="accordionExample2">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo6"
@@ -550,10 +570,10 @@ const Pricing = () => {
                 </h2>
                 <div
                   id="collapseTwo6"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   data-bs-parent="#accordionExample2"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     The timeline for completing a website depends on its
                     complexity and features. Generally, a simple website can be
                     completed within a few weeks, while more complex projects

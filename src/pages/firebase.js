@@ -1,6 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
-// import { Database } from 'firebase/database';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBvMVgw0K06jF6WKrm-5f8ezrLd1N0XEkE",
@@ -12,7 +11,16 @@ const firebaseConfig = {
   measurementId: "G-25H7N7ZNGC",
 };
 
-const app = firebase.initializeApp(firebaseConfig);
-const database = app.database();
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-export default database;
+export const addQueryToFirestore = async (queryData) => {
+  try {
+    const docRef = await addDoc(collection(db, 'queries'), queryData);
+    console.log('Document written with ID: ', docRef.id);
+    return docRef.id;
+  } catch (error) {
+    console.error('Error adding document: ', error);
+    throw error; 
+  }
+};

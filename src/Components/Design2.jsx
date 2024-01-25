@@ -24,7 +24,8 @@ const Design2 = () => {
             color: { value: "#0d47a1" },
           },
           fullScreen: { enable: true, zIndex: 0 },
-          fpsLimit: 120,
+          fpsLimit: 60
+          ,
           interactivity: {
             detectsOn: "window",
             events: {
