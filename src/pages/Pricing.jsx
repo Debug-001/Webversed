@@ -32,6 +32,7 @@ const Pricing = () => {
         selectedService,
         message,
       });
+      alert('Your response has been recorded. Expect contact soon!')
     } catch (error) {
       console.error("Error submitting query: ", error);
     }
