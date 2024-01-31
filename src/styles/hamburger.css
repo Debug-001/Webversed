@@ -135,3 +135,8 @@
   transform: translate3d(80px, 80px, 0) rotate(45deg);
   transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.hamburger--emphatic .hamburger-inner {
+  display: none;
+  transition: background-color 0.125s 0.175s ease-in;
+}
