@@ -13,8 +13,8 @@ const Notfound = () => {
   return (
     <>
       <Navbar />
-      <section className="pt-5 pb-5">
-        <div className="container">
+      <section className="pt-5 pb-5 bg-light pb-5">
+        <div className="container pb-5">
           <div className="d-flex flex-row justify-content-center align-items-center">
             <h1 className="display-404">4</h1>
             <img className="img-404 img-fluid" src={notfound} alt="404-Not found" />

@@ -6,7 +6,7 @@ import { BiSolidBookContent } from "react-icons/bi";
 import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
-import Design from "../Components/Design";
+import Design2 from "../Components/Design2";
 import { addQueryToFirestore } from "../firebase";
 
 const Pricing = () => {
@@ -48,7 +48,7 @@ const Pricing = () => {
   return (
     <>
       <Navbar />
-      <Design />
+      <Design2 />
       <section className="pricing-section" id="pricing">
         <div className="text-group p-5">
           <h1 className="display-4 font-weight-bold">

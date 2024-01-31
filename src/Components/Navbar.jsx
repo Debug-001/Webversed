@@ -3,6 +3,15 @@ import logo from "/img/logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navItems = [
+    { text: 'Home', to: '/' },
+    { text: 'Services', to: '/services' },
+    { text: 'Pricing', to: '/pricing' },
+    { text: 'Career', to: '/career' },
+    { text: 'About Us', to: '/about' },
+  ];
+
+
   useEffect(() => {
     var hamburger = document.querySelector(".hamburger");
     const handleClick = () => {
@@ -46,49 +55,19 @@ const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav m-auto mb-2 mb-lg-0">
-            <li className="nav-item mx-3">
-              <Link
-                className="nav-link active hover-underline-animation"
-                aria-current="page"
-                to="/"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <a
-                className="nav-link active hover-underline-animation"
-                href="#services"
-              >
-                Services
-              </a>
-            </li>
-            <li className="nav-item mx-3">
-              <Link
-                className="nav-link active hover-underline-animation"
-                to="/pricing"
-              >
-                Pricing
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link
-                className="nav-link active hover-underline-animation"
-                to="/career"
-              >
-                Career
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link
-                className="nav-link active hover-underline-animation"
-                to="/about"
-              >
-                About Us
-              </Link>
-            </li>
-          </ul>
+        <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+      {navItems.map((item, index) => (
+        <li className="nav-item mx-3" key={index}>
+          <Link
+            className="nav-link active hover-underline-animation"
+            aria-current="page"
+            to={item.to}
+          >
+            {item.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
           <Link to="/contact">
             <button className="btn btn-primary contact-btn-nav">Contact Us</button>
           </Link>

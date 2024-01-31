@@ -21,7 +21,7 @@ const Design2 = () => {
         options={{
           autoPlay: true,
           background: {
-            color: { value: "#0d47a1" },
+            color: { value: "#0d47a" },
           },
           fullScreen: { enable: true, zIndex: 0 },
           fpsLimit: 60

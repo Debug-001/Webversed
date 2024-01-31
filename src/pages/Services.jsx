@@ -1,30 +1,28 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import "../styles/contact.css";
-import wormhole from "/img/wormhole.jpg";
-import Design2 from "../Components/Design2";
+import Design from "../Components/Design";
+import {Fade} from 'react-awesome-reveal'
+import '../styles/services.css'
+import left from '/img/left.png'
+import right from '/img/right.png'
+import Design2 from "../Components/Design";
 
 const Services = () => {
-  
   useEffect(() => {
     document.title = `Webversed | Services`;
-  },[]);
+  }, []);
 
   return (
     <>
       <Navbar />
       <Design2/>
-      <section className="service">
-        <div className="container d-flex justify-content-center position-relative">
-          <img className="worm-img position-absolute" src={wormhole} alt="" />
-          <div className="text-group">
-          <h1 className="service-heading">Choose</h1>
-          <p></p>
-          </div>
+      <section className="">
+        <div className="services main container d-flex justify-content-center align-items-center pt-5 mb-5">
+          <h1>hiijijiji</h1>
+       
         </div>
       </section>
-
       <Footer />
     </>
   );

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { Fade } from "react-awesome-reveal";
+import Design2 from "../Components/Design2";
 import "./index.css";
 
 const Career = () => {
@@ -15,7 +17,8 @@ const Career = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-light">
+      <Design2/>
+      <section className="">
         <div className="container pt-5">
           <div className="text-heading d-flex flex-column justify-content-center align-items-center">
             <h1 className="font-weight-bolder text0-center display-3">
@@ -154,6 +157,46 @@ const Career = () => {
               </div>
             </div>
           </div>
+
+          <div className="container p-5 contact-below pb-5">
+          <div className="card mx-2">
+            <div className="card-body-con">
+              <div className="row">
+                <div className="col mx-5 pt-5 pb-4">
+                  <Fade direction="up">
+                    <h2 className="">Build your dream with Webversed</h2>
+                  </Fade>
+                  <Fade direction="up">
+                    <p className="">
+                      We're here to help you scale your dream business the
+                      boundaries of financial success. Contact us now and get it
+                      done right now.
+                    </p>
+                  </Fade>
+                </div>
+                <div className="col d-flex justify-content-center align-items-center">
+                  <div className="btn-container">
+                    <Fade direction="up">
+                      <a href='/pricing'
+                        className="btn btn-primary"
+                        style={{
+                          width: "12rem",
+                          padding: "1rem",
+                          fontSize: "1rem",
+                          marginLeft:"10px",
+                          marginBottom:"1.5rem"
+                        }}
+                      >
+                        Get Started for Free
+                      </a>
+                    </Fade>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         </div>
       </section>
       <Footer />
