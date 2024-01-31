@@ -7,7 +7,7 @@ import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { IoCheckmark } from "react-icons/io5";
 import Design from "../Components/Design";
-import { addQueryToFirestore } from "./firebase";
+import { addQueryToFirestore } from "../firebase";
 
 const Pricing = () => {
 
