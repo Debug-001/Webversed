@@ -46,6 +46,74 @@
     radial-gradient(circle closest-side at 40% 30%, #07003a, #000);
 }
 
+.img-404 {
+  width: 17rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img-404 {
+  width: 200px;
+  height: 200px;
+  transition: transform 1s ease-in-out;
+  animation: rotate 10s linear infinite;
+}
+
+@media (max-width: 575.98px) {
+  .display-404 {
+    padding-right: 10px;
+    font-size: 10rem !important;
+  }
+
+  .img-404 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .contact-btn-nav{
+    margin-left: 1rem;
+    font-size: 1rem !important;
+  }
+
+  .navbar-nav{
+    margin-bottom: 1rem;
+    margin-top: 1rem !important;
+  }
+  .navbar-nav > li{
+    font-size: 1.3rem;
+  }
+
+  .logo-text {
+    margin-left: 3rem;
+  }
+
+  .display-404 {
+    padding-right: 10px;
+    font-size: 10rem !important;
+  }
+
+  .img-404 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.display-404 {
+  font-weight: 900;
+  color: #5030e5;
+  font-size: 14rem;
+}
+
 .newst-text {
   display: flex;
   justify-content: center;
@@ -97,7 +165,12 @@
   padding: 64px 48px;
   background-position: 0 0, 50%;
   background-repeat: repeat, repeat;
-  background: linear-gradient(to top,rgba(36, 103, 236, .16),  rgba(221, 221, 221, 0)), url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background: linear-gradient(
+      to top,
+      rgba(36, 103, 236, 0.16),
+      rgba(221, 221, 221, 0)
+    ),
+    url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
   width: 35rem;
 }
 
@@ -105,7 +178,12 @@
   border: 2px solid #3b4251;
   border-radius: 8px;
   padding: 64px 48px;
-  background: linear-gradient(to top,rgba(36, 103, 236, .16),  rgba(221, 221, 221, 0)), url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
+  background: linear-gradient(
+      to top,
+      rgba(36, 103, 236, 0.16),
+      rgba(221, 221, 221, 0)
+    ),
+    url(https://assets-global.website-files.com/6530f97cd208670620175967/653a4c2c77c28e945e6a6bbf_Grid%20BG.svg);
   background-position: 0 0, 50%;
   background-repeat: repeat, repeat;
   width: 35rem;
@@ -227,7 +305,7 @@ body {
 
 .logo-text {
   color: #041f31;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   font-weight: bold;
 }
 
@@ -320,24 +398,21 @@ body {
   border-radius: 10px;
 }
 
-.card-body1:hover{
+.card-body1:hover {
   transform: scale(1.05);
-  transition: all .25s;
+  transition: all 0.25s;
 }
 
-.card-body1:hover ~ .card{
-filter: opacity(.99);
- /* fui opacity: 0.99 !important;  */
+.card-body1:hover ~ .card {
+  filter: opacity(0.99);
+  /* fui opacity: 0.99 !important;  */
 }
-
 
 .card-top-heading {
   padding-top: 4rem !important;
   font-size: larger;
   color: #a9a9a9;
 }
-
-
 
 .card-text-heading {
   font-weight: bolder;
@@ -547,7 +622,7 @@ filter: opacity(.99);
 
 .brand-section {
   padding: 2rem;
-  padding-top:6rem;
+  padding-top: 6rem;
   padding-bottom: 6rem;
   margin-top: 5rem;
   margin-bottom: 1rem;
@@ -562,8 +637,8 @@ filter: opacity(.99);
   font-weight: 900;
   font-size: 3rem;
   background: -webkit-linear-gradient(#ecf4fb, hsl(186, 100%, 79%));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .slider-div {

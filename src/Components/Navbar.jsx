@@ -28,7 +28,7 @@ const Navbar = () => {
             />
           </Link>
           <Link to="/">
-            <h2 className="logo-text mx-3 pt-2">Webversed</h2>
+            <h2 className="logo-text pt-2">Webversed</h2>
           </Link>
         </div>
         <button
@@ -90,7 +90,7 @@ const Navbar = () => {
             </li>
           </ul>
           <Link to="/contact">
-            <div className="btn btn-primary">Contact Us</div>
+            <button className="btn btn-primary contact-btn-nav">Contact Us</button>
           </Link>
         </div>
       </div>
