@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { IoOpenOutline } from "react-icons/io5";
 
 
 const Career = () => {
+
+  useEffect(() => {
+    document.title = `Careers`;
+  },[]);
+
   return (
     <>
       <Navbar />

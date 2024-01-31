@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { Fade } from "react-awesome-reveal";
@@ -10,9 +10,10 @@ import Design from "../Components/Design";
 import { addQueryToFirestore } from "./firebase";
 
 const Pricing = () => {
-  // const [name, setName] = useState('');
-  // const [contactNum, setContactNum] = useState('');
-  // const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    document.title = `Webversed | Pricing`;
+  },[]);
 
   const [name, setName] = useState("");
   const [contactNum, setContactNum] = useState("");
@@ -48,7 +49,7 @@ const Pricing = () => {
     <>
       <Navbar />
       <Design />
-      <section className="pricing-section">
+      <section className="pricing-section" id="pricing">
         <div className="text-group p-5">
           <h1 className="display-4 font-weight-bold">
             Flexible Plans that suits your needs

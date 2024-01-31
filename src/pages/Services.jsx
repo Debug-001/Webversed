@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import "../styles/contact.css";
@@ -6,6 +6,11 @@ import wormhole from "/img/wormhole.jpg";
 import Design2 from "../Components/Design2";
 
 const Services = () => {
+  
+  useEffect(() => {
+    document.title = `Webversed | Services`;
+  },[]);
+
   return (
     <>
       <Navbar />

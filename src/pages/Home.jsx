@@ -1,4 +1,4 @@
-import React, { useRef, Component, useState } from "react";
+import React, { useRef, Component, useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import web from "/img/web.png";
@@ -19,6 +19,13 @@ import Design from "../Components/Design";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+
+  
+  useEffect(() => {
+    document.title = `Webversed | Home`;
+  },[]);
+
+
   const parallax = useRef();
   const [selectedService, setSelectedService] = useState("");
   const handleServiceSelection = (event, service) => {
@@ -399,7 +406,7 @@ const Home = () => {
                         <IoCheckmark className="check-icon" /> Portoflios
                       </li>
                     </ul>
-                    <Link to="/pricing" className="btn btn-third" type="button">
+                    <Link to="/pricing#pricing" className="btn btn-third" type="button">
                       Know More!
                     </Link>
                   </Fade>

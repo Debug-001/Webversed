@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import contactimg from "/img/contact-img.png";
@@ -9,6 +9,11 @@ import Design from "../Components/Design";
 
 const Contact = () => {
   const [value, setValue] = useState();
+
+  
+  useEffect(() => {
+    document.title = `Contact Us`;
+  },[]);
 
   return (
     <>
